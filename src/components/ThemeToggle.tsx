@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 type Theme = 'dark' | 'light'
-const THEME_COLORS: Record<Theme, string> = { dark: '#0b1220', light: '#f2f5f9' }
+const THEME_COLORS: Record<Theme, string> = { dark: '#141210', light: '#faf6f0' }
 
 function currentTheme(): Theme {
   return document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark'
