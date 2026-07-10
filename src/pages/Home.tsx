@@ -1,6 +1,6 @@
 import { useLiveQuery } from 'dexie-react-hooks'
 import { db } from '../lib/db'
-import { computeScore } from '../lib/score'
+import { computeScore, nextStep } from '../lib/score'
 import { KIT_ITEMS } from '../data/kit'
 import { ScoreRing } from '../components/ScoreRing'
 import { InstallPrompt } from '../components/InstallPrompt'
@@ -12,6 +12,7 @@ export function Home() {
   const kitStates = useLiveQuery(() => db.kitItems.toArray(), [], [])
   const plan = useLiveQuery(() => db.plan.get('main'), [])
   const score = computeScore(kitStates ?? [], plan)
+  const next = nextStep(kitStates ?? [], plan)
 
   return (
     <div className="page">
@@ -25,6 +26,11 @@ export function Home() {
         {score.total === 0 && (
           <Link to="/kit" className="cta">
             Empezar con el kit →
+          </Link>
+        )}
+        {score.total > 0 && score.total < 100 && next && (
+          <Link to={next.to} className="cta">
+            Siguiente: {next.label} — {next.minutes} min
           </Link>
         )}
       </section>

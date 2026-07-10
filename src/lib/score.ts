@@ -48,6 +48,31 @@ export function expiryStatus(states: KitItemState[]): { expired: string[]; expir
   return { expired, expiringSoon }
 }
 
+/** The single next action for the home CTA (goal-gradient: name one step, never a count). */
+export function nextStep(
+  states: KitItemState[],
+  plan: FamilyPlan | undefined,
+): { label: string; to: string; minutes: number } | null {
+  const byId = new Map(states.map((s) => [s.itemId, s]))
+  const unchecked = KIT_ITEMS.find((i) => byId.get(i.id)?.checked !== 1)
+  if (unchecked) return { label: unchecked.label, to: '/kit', minutes: 2 }
+
+  const filled = (s: string) => s.trim().length > 0
+  const planSteps: [boolean, string][] = [
+    [!!plan && plan.members.length > 0 && plan.members.every((m) => filled(m.name)), 'Tu familia en el plan'],
+    [!!plan && filled(plan.outOfTownContact.name) && filled(plan.outOfTownContact.phone), 'Contacto fuera de la ciudad'],
+    [!!plan && filled(plan.outOfCountryContact.name) && filled(plan.outOfCountryContact.phone), 'Contacto fuera del país'],
+    [!!plan && filled(plan.meetingPoints.indoor), 'Punto seguro dentro de casa'],
+    [!!plan && filled(plan.meetingPoints.neighborhood), 'Punto de encuentro del barrio'],
+    [!!plan && filled(plan.meetingPoints.outsideNeighborhood), 'Punto fuera del barrio'],
+    [!!plan && filled(plan.meetingPoints.outOfTown), 'Punto fuera de la ciudad'],
+    [!!plan && plan.localNumbers.some((n) => filled(n.number) && n.number !== '911'), 'Números de emergencia locales'],
+  ]
+  const missing = planSteps.find(([done]) => !done)
+  if (missing) return { label: missing[1], to: '/plan', minutes: 5 }
+  return null
+}
+
 export function computeScore(states: KitItemState[], plan: FamilyPlan | undefined): ScoreBreakdown {
   const kit = kitScore(states)
   const p = planScore(plan)
