@@ -42,7 +42,7 @@ export default defineConfig({
       workbox: {
         // Precache the entire shell + bundled content: the app must be 100%
         // functional offline from first load (see CLAUDE.md).
-        globPatterns: ['**/*.{js,css,html,svg,png,ico,json,webmanifest}'],
+        globPatterns: ['**/*.{js,css,html,svg,png,ico,json,webmanifest,woff2}'],
         navigateFallback: 'index.html',
         runtimeCaching: [
           {
