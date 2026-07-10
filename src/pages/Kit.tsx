@@ -39,6 +39,19 @@ export function Kit() {
         </p>
       </header>
 
+      <div className="kit-sticky no-print">
+        <div
+          className="bar"
+          role="progressbar"
+          aria-valuenow={score}
+          aria-valuemin={0}
+          aria-valuemax={100}
+          aria-label="Avance del kit"
+        >
+          <div style={{ width: `${score}%` }} />
+        </div>
+      </div>
+
       <div className="card household">
         <label htmlFor="hh">¿Cuántas personas viven en tu casa?</label>
         <div className="stepper">
@@ -53,10 +66,19 @@ export function Kit() {
         <p className="dim">Las cantidades de abajo ya están calculadas para {size} {size === 1 ? 'persona' : 'personas'}.</p>
       </div>
 
-      {KIT_CATEGORIES.map((cat) => (
-        <section key={cat} className="kit-group">
-          <h2>{cat}</h2>
-          {KIT_ITEMS.filter((i) => i.category === cat).map((item) => {
+      {KIT_CATEGORIES.map((cat, idx) => {
+        const items = KIT_ITEMS.filter((i) => i.category === cat)
+        const done = items.filter((i) => byId.get(i.id)?.checked === 1).length
+        return (
+        <section
+          key={cat}
+          className="kit-group rise-in"
+          style={{ animationDelay: `${idx * 40}ms` }}
+        >
+          <h2>
+            {cat} <span className="count">· {done}/{items.length}</span>
+          </h2>
+          {items.map((item) => {
             const st = byId.get(item.id)
             const qty = quantityFor(item, size)
             return (
@@ -89,7 +111,8 @@ export function Kit() {
             )
           })}
         </section>
-      ))}
+        )
+      })}
 
       <p className="status">
         No hace falta comprar todo hoy. Marca lo que ya tienes en casa — suele ser más de lo que crees.
