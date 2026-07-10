@@ -634,6 +634,117 @@ a.card:active {
   margin: 10px 0 0 40px;
 }
 
+/* ---- plan wizard ---- */
+
+.wizard-bar {
+  display: flex;
+  gap: 6px;
+  margin-top: 14px;
+}
+
+.wizard-bar span {
+  flex: 1;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--surface-3);
+  transition: background-color 300ms ease;
+}
+
+.wizard-bar span.done {
+  background: var(--accent-grad);
+}
+
+.wizard-bar span.current {
+  background: color-mix(in srgb, var(--accent) 45%, var(--surface-3));
+}
+
+.wizard-page {
+  /* room for the pinned wizard nav above the bottom nav sheet */
+  padding-bottom: calc(170px + env(safe-area-inset-bottom));
+}
+
+.wizard-nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: calc(88px + env(safe-area-inset-bottom));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  z-index: 6;
+}
+
+.wizard-nav::before {
+  /* solid sheet behind the buttons so content never shows through */
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--bg);
+  border-radius: var(--r-lg) var(--r-lg) 0 0;
+  z-index: -1;
+}
+
+.wizard-nav .back {
+  background: var(--surface-1);
+  box-shadow: var(--elev);
+  border-radius: 12px;
+  text-decoration: none;
+  padding: 10px 16px;
+  color: var(--text);
+}
+
+.wizard-nav .back {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.wizard-nav .back:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.wizard-nav .next {
+  flex: 1;
+  max-width: 260px;
+  box-shadow: var(--elev);
+  transition: opacity 250ms ease;
+}
+
+.wizard-nav .next.pending {
+  opacity: 0.4;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.summary-row + .summary-row {
+  border-top: 1px solid var(--surface-3);
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.scale-in {
+  animation: scale-in 420ms var(--ease-spring) both;
+}
+
 /* ---- plan ---- */
 
 .member {
