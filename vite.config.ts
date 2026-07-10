@@ -17,8 +17,8 @@ export default defineConfig({
         scope: '/',
         display: 'standalone',
         orientation: 'portrait',
-        background_color: '#0b1220',
-        theme_color: '#0b1220',
+        background_color: '#141210',
+        theme_color: '#141210',
         categories: ['utilities', 'health'],
         shortcuts: [
           {
