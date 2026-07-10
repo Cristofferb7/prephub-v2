@@ -11,18 +11,20 @@ export function ScoreRing({ value, size = 160 }: { value: number; size?: number 
       aria-label={`Puntuación de preparación: ${value} por ciento`}
     >
       <circle cx="80" cy="80" r={r} fill="none" stroke="var(--border)" strokeWidth="14" />
-      <circle
-        cx="80"
-        cy="80"
-        r={r}
-        fill="none"
-        stroke="var(--accent)"
-        strokeWidth="14"
-        strokeLinecap="round"
-        strokeDasharray={`${filled} ${c - filled}`}
-        transform="rotate(-90 80 80)"
-        style={{ transition: 'stroke-dasharray 400ms ease' }}
-      />
+      {value > 0 && (
+        <circle
+          cx="80"
+          cy="80"
+          r={r}
+          fill="none"
+          stroke="var(--accent)"
+          strokeWidth="14"
+          strokeLinecap="round"
+          strokeDasharray={`${filled} ${c - filled}`}
+          transform="rotate(-90 80 80)"
+          style={{ transition: 'stroke-dasharray 400ms ease' }}
+        />
+      )}
       <text
         x="80"
         y="76"

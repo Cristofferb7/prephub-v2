@@ -22,6 +22,11 @@ export function Home() {
           {score.total > 0 && score.total < 100 && 'Vas bien. Cada paso cuenta cuando tiemble.'}
           {score.total === 100 && 'Familia preparada. Revisa los vencimientos de vez en cuando.'}
         </p>
+        {score.total === 0 && (
+          <Link to="/kit" className="cta">
+            Empezar con el kit →
+          </Link>
+        )}
       </section>
 
       {score.expired.length > 0 && (
@@ -66,7 +71,10 @@ export function Home() {
 
       <InstallPrompt />
 
-      <p className="status">Todo queda en tu teléfono. Nada se envía a ningún servidor.</p>
+      <p className="status">
+        Todo queda en tu teléfono. Nada se envía a ningún servidor.{' '}
+        <Link to="/fuentes">Fuentes y créditos</Link>
+      </p>
     </div>
   )
 }

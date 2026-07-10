@@ -21,6 +21,18 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="apple-mobile-web-app-title" content="PrepHub" />
     <title>PrepHub — Preparación ante terremotos</title>
+    <script>
+      // Theme init before first paint (default: dark — blackout/OLED friendly)
+      ;(function () {
+        try {
+          var t = localStorage.getItem('ph-theme')
+          if (t !== 'light' && t !== 'dark') t = 'dark'
+          document.documentElement.setAttribute('data-theme', t)
+          var m = document.querySelector('meta[name="theme-color"]')
+          if (m) m.setAttribute('content', t === 'light' ? '#f2f5f9' : '#0b1220')
+        } catch (e) {}
+      })()
+    </script>
   </head>
   <body>
     <div id="root"></div>
