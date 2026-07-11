@@ -15,6 +15,28 @@ Research-backed direction (July 2026): fitness-dashboard warmth (Whoop/Apple Fit
 4. **Plan familiar → one-question-per-screen wizard** (biggest task): convert the long form into 5–6 steps with a segmented amber progress bar on top (goal-gradient effect reduces drop-off), one section per step, big option-card inputs where applicable, Next button pinned bottom (40% opacity until valid), always-visible labeled Back, editable summary + celebration (plan card scales in with `--ease-spring`) at the end. Keep all existing fields and Dexie persistence; keep share/print/QR on the final step.
 5. **Display font (optional, last)**: self-host ONE variable font for headings + the ring numeral only — Onest or Figtree, subsetted to Latin+digits (~40 KB woff2), `font-display: swap`, add to SW precache. Body stays system stack. Skip if it pushes first-load JS+CSS+font past 300 KB gzipped.
 
+## Reference apps addendum (July 10) — NERV · FEMA · Watch Duty
+
+Owner wants inspiration from nerv.app, the FEMA app, and watchduty.org. Synthesis of what to take:
+
+**NERV (Japan)** — its brand IS accessibility: per-user text size (±levels), font weight, contrast modes, color-vision-deficiency themes, screen-reader layouts; "convey information not only by colour, but also by text." Cowork already implemented the core (see below). Remaining NERV-inspired backlog: (a) audit every state so nothing is communicated by color alone (done-items, banners, nav active — add icons/text where needed); (b) color-vision-deficiency check of amber/green/red trio (simulate protanopia/deuteranopia; adjust --good/--emergency if they collide); (c) screen-reader pass: aria-live on score changes, meaningful read-outs on cards (NERV reads full weather sentences — our cards should read "Kit de emergencia, 40 por ciento completo").
+
+**Watch Duty (US)** — trust through verification and provenance. Backlog: (a) every guide page gets a provenance chip: "Fuente: FUNVISIS / OPS · Revisado: julio 2026" (data already in guides.ts sources — surface it as a visible chip at top, not buried at bottom); (b) reorganize Guías index into the three-phase structure (Antes / Durante / Después + Lluvias) — mirrors Watch Duty's Monitor→Prepare→Respond framing and matches how people actually search under stress; (c) tone: verified-facts voice, timestamps on content updates.
+
+**FEMA app** — validation, not new features: PrepHub already covers its core loop (checklist + family plan + guides) Spanish-first. Its one steal: bilingual toggle. Backlog (v2, low priority): English language option — structure copy so strings can be extracted later (don't hardcode more prose into components; keep content in data files).
+
+### Cowork implemented (July 10, second pass — don't redo)
+
+- NERV-style accessibility system: `/ajustes` page ("Pantalla y texto", Aa button in topbar) with text size (5 levels, root-font scaling — ALL css font-sizes converted to rem), bold-text toggle, high-contrast mode (token overrides incl. visible hairline borders), theme toggle moved into it. Prefs persist (ph-text/ph-bold/ph-contrast) and apply pre-paint in index.html.
+- Fixed brand SVG referencing dead tokens (--surface/--border → --surface-2).
+
+### Your next tasks (in priority order)
+
+1. Watch Duty provenance chips on guide pages + three-phase Guías index regroup.
+2. NERV color-only audit + aria-live score + card read-outs.
+3. Verify /ajustes text scaling doesn't break the wizard pinned nav or kit sticky bar at "Enorme" (23.5px root) on a 360px viewport — fix any overflow with wrapping, never smaller text.
+4. Color-vision simulation check of the green/amber/red system.
+
 ## Hard rules (unchanged from CLAUDE.md)
 
 No backdrop-filter. Animate transform/opacity only. No animation libraries. `prefers-reduced-motion` respected everywhere. Red = emergency contexts only. Bundle budget < 300 KB gz. Everything works offline. Spanish (Venezuelan) copy. After changes: `npm run build` green, then `vercel --prod`.

@@ -1,5 +1,7 @@
+import { useEffect, useState } from 'react'
 import { useLiveQuery } from 'dexie-react-hooks'
-import { db } from '../lib/db'
+import { db, getAreas } from '../lib/db'
+import { demoProvider, type Alert } from '../data/alerts'
 import { computeScore, nextStep } from '../lib/score'
 import { KIT_ITEMS } from '../data/kit'
 import { ScoreRing } from '../components/ScoreRing'
@@ -13,6 +15,16 @@ export function Home() {
   const plan = useLiveQuery(() => db.plan.get('main'), [])
   const score = computeScore(kitStates ?? [], plan)
   const next = nextStep(kitStates ?? [], plan)
+  const [severeAlert, setSevereAlert] = useState<Alert | null>(null)
+
+  useEffect(() => {
+    getAreas().then((areas) => {
+      if (areas.length === 0) return
+      demoProvider.getActiveAlerts(areas).then((list) => {
+        setSevereAlert(list.find((a) => a.severity === 'severe' || a.severity === 'extreme') ?? null)
+      })
+    })
+  }, [])
 
   return (
     <div className="page">
@@ -34,6 +46,13 @@ export function Home() {
           </Link>
         )}
       </section>
+
+      {severeAlert && (
+        <div className="banner banner-warn" role="alert">
+          <strong>{severeAlert.headline}</strong> <span className="chip demo">DEMO</span>{' '}
+          <Link to="/avisos">Ver avisos</Link>
+        </div>
+      )}
 
       {score.expired.length > 0 && (
         <div className="banner banner-warn" role="alert">
@@ -68,6 +87,20 @@ export function Home() {
           <div style={{ width: `${score.plan}%` }} />
         </div>
         <p>Contactos, puntos de encuentro — para compartir e imprimir.</p>
+      </Link>
+
+      <Link to="/cerca" className="card">
+        <h2>
+          Cerca de ti <span className="chip demo">DEMO</span>
+        </h2>
+        <p>Refugios y puntos de apoyo: agua, comida, medicinas, techo.</p>
+      </Link>
+
+      <Link to="/avisos" className="card">
+        <h2>
+          Avisos <span className="chip demo">DEMO</span>
+        </h2>
+        <p>Sismos y lluvias en tu zona — qué pasó y qué hacer.</p>
       </Link>
 
       <Link to="/guias" className="card">

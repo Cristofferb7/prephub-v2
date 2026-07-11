@@ -6,7 +6,9 @@ import { Plan } from './pages/Plan'
 import { GuideIndex, GuidePage } from './pages/Guias'
 import { Ahora } from './pages/Ahora'
 import { Fuentes } from './pages/Fuentes'
-import { ThemeToggle } from './components/ThemeToggle'
+import { Ajustes } from './pages/Ajustes'
+import { Cerca } from './pages/Cerca'
+import { Avisos } from './pages/Avisos'
 
 const ICO = {
   size: 24,
@@ -92,6 +94,9 @@ function Screen() {
   if (path === '/guias') return <GuideIndex />
   if (path.startsWith('/guias/')) return <GuidePage id={path.slice('/guias/'.length)} />
   if (path === '/fuentes') return <Fuentes />
+  if (path === '/ajustes') return <Ajustes />
+  if (path === '/cerca') return <Cerca />
+  if (path === '/avisos') return <Avisos />
   return <Home />
 }
 
@@ -106,13 +111,15 @@ function Shell() {
       <header className="topbar no-print">
         <Link to="/" className="brand" aria-label="PrepHub, inicio">
           <svg width="34" height="34" viewBox="0 0 44 44" aria-hidden="true">
-            <rect width="44" height="44" rx="10" fill="var(--surface)" stroke="var(--border)" />
+            <rect width="44" height="44" rx="10" fill="var(--surface-2)" />
             <path d="M22 8v28M8 22h28" stroke="var(--accent)" strokeWidth="9" />
           </svg>
           <strong>PrepHub</strong>
         </Link>
         <div className="topbar-actions">
-          <ThemeToggle />
+          <Link to="/ajustes" className="icon-btn" aria-label="Pantalla y texto">
+            <strong aria-hidden="true">Aa</strong>
+          </Link>
           <Link to="/ahora" className="ahora-pill">
             Ahora mismo
           </Link>

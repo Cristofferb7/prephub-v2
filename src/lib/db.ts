@@ -87,6 +87,16 @@ export async function setHouseholdSize(n: number) {
   await db.settings.put({ key: 'householdSize', value: n })
 }
 
+/** Registered estados for /avisos (lowercase ids matching Alert.areas). Max 3. */
+export async function getAreas(): Promise<string[]> {
+  const s = await db.settings.get('areas')
+  return Array.isArray(s?.value) ? (s.value as string[]) : []
+}
+
+export async function setAreas(areas: string[]) {
+  await db.settings.put({ key: 'areas', value: areas.slice(0, 3) })
+}
+
 /** Ask the browser to protect IndexedDB/Cache from eviction. Safe to call repeatedly. */
 export async function requestPersistentStorage() {
   try {

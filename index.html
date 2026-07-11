@@ -25,11 +25,17 @@
       // Theme init before first paint (default: dark — blackout/OLED friendly)
       ;(function () {
         try {
+          var d = document.documentElement
           var t = localStorage.getItem('ph-theme')
           if (t !== 'light' && t !== 'dark') t = 'dark'
-          document.documentElement.setAttribute('data-theme', t)
+          d.setAttribute('data-theme', t)
           var m = document.querySelector('meta[name="theme-color"]')
           if (m) m.setAttribute('content', t === 'light' ? '#faf6f0' : '#141210')
+          // accessibility prefs (NERV-style): text size, bold, contrast
+          var tx = localStorage.getItem('ph-text')
+          if (tx === '-1' || tx === '1' || tx === '2' || tx === '3') d.setAttribute('data-text', tx)
+          if (localStorage.getItem('ph-bold') === '1') d.setAttribute('data-bold', '1')
+          if (localStorage.getItem('ph-contrast') === 'high') d.setAttribute('data-contrast', 'high')
         } catch (e) {}
       })()
     </script>

@@ -104,12 +104,12 @@ h3 {
 }
 
 h1 {
-  font-size: 28px;
+  font-size: 1.65rem;
   line-height: 1.15;
 }
 
 h2 {
-  font-size: 19px;
+  font-size: 1.12rem;
 }
 
 p {
@@ -216,7 +216,7 @@ input[type='date'] {
 label {
   display: block;
   margin-top: 12px;
-  font-size: 15px;
+  font-size: 0.88rem;
   color: var(--text-dim);
 }
 
@@ -235,7 +235,7 @@ fieldset {
 
 legend {
   color: var(--text-dim);
-  font-size: 14px;
+  font-size: 0.82rem;
   font-weight: 600;
   padding: 0;
   float: left;
@@ -293,7 +293,7 @@ li {
   gap: 10px;
   color: var(--text);
   text-decoration: none;
-  font-size: 19px;
+  font-size: 1.12rem;
 }
 
 .ahora-pill {
@@ -375,7 +375,7 @@ li {
   padding: 4px 0 5px;
   color: var(--text-dim);
   text-decoration: none;
-  font-size: 12.5px;
+  font-size: 0.74rem;
   font-weight: 600;
   letter-spacing: 0.01em;
   -webkit-tap-highlight-color: transparent;
@@ -432,7 +432,7 @@ a.card:active {
 
 .card p {
   color: var(--text-dim);
-  font-size: 15px;
+  font-size: 0.88rem;
 }
 
 .banner {
@@ -441,7 +441,7 @@ a.card:active {
   border-left: 4px solid var(--accent);
   border-radius: var(--r-sm);
   padding: 12px 14px;
-  font-size: 15px;
+  font-size: 0.88rem;
 }
 
 .banner-warn {
@@ -450,7 +450,7 @@ a.card:active {
 
 .status {
   text-align: center;
-  font-size: 14px;
+  font-size: 0.82rem;
   color: var(--text-dim);
   margin-top: 4px;
 }
@@ -495,7 +495,7 @@ a.card:active {
   color: var(--accent-ink);
   border-radius: var(--r-md);
   font-weight: 800;
-  font-size: 17px;
+  font-size: 1rem;
   text-decoration: none;
   transition: transform 120ms var(--ease-spring);
 }
@@ -583,12 +583,12 @@ a.card:active {
 
 .stepper button {
   width: 56px;
-  font-size: 24px;
+  font-size: 1.41rem;
   font-weight: 700;
 }
 
 .stepper output {
-  font-size: 28px;
+  font-size: 1.65rem;
   font-weight: 800;
   font-variant-numeric: tabular-nums;
   min-width: 40px;
@@ -598,7 +598,7 @@ a.card:active {
 .kit-group h2 {
   margin: 10px 0 2px;
   color: var(--text-dim);
-  font-size: 14px;
+  font-size: 0.82rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.07em;
@@ -622,7 +622,7 @@ a.card:active {
   gap: 12px;
   margin: 0;
   color: var(--text);
-  font-size: 16px;
+  font-size: 0.94rem;
   cursor: pointer;
 }
 
@@ -630,7 +630,7 @@ a.card:active {
   display: block;
   color: var(--text-dim);
   margin-top: 2px;
-  font-size: 14px;
+  font-size: 0.82rem;
 }
 
 .kit-item.done .kit-check strong {
@@ -642,6 +642,261 @@ a.card:active {
   align-items: center;
   gap: 10px;
   margin: 10px 0 0 40px;
+}
+
+/* ---- cerca / avisos (DEMO features) ---- */
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--surface-3);
+  color: var(--text-dim);
+}
+
+.chip.demo {
+  background: var(--accent-soft);
+  color: var(--accent-bright);
+  letter-spacing: 0.02em;
+}
+
+.chip.status-abierto {
+  background: var(--good-dim);
+  color: var(--good);
+}
+
+.chip.status-lleno {
+  background: var(--accent-soft);
+  color: var(--accent-bright);
+}
+
+.chip.status-sin_confirmar,
+.chip.status-cerrado {
+  background: var(--surface-3);
+  color: var(--text-dim);
+}
+
+.chip.sev-extreme,
+.chip.sev-severe {
+  background: rgba(220, 38, 38, 0.16);
+  color: var(--emergency-strong);
+}
+
+.chip.sev-moderate,
+.chip.sev-minor {
+  background: var(--accent-soft);
+  color: var(--accent-bright);
+}
+
+.seg-control {
+  display: flex;
+  background: var(--surface-1);
+  border-radius: 999px;
+  padding: 4px;
+  box-shadow: var(--elev);
+}
+
+.seg-control button {
+  flex: 1;
+  min-height: 42px;
+  border: none;
+  border-radius: 999px;
+  background: none;
+  color: var(--text-dim);
+  font-weight: 700;
+}
+
+.seg-control button.active {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filter-pill {
+  min-height: 40px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--surface-1);
+  color: var(--text-dim);
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  box-shadow: var(--elev);
+}
+
+.filter-pill.on {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+.place-card .place-head {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  min-height: 0;
+  color: var(--text);
+  font-size: 16px;
+}
+
+.place-meta {
+  font-size: 13.5px;
+  margin-top: 8px;
+}
+
+.place-detail {
+  margin-top: 12px;
+  border-top: 1px solid var(--surface-3);
+  padding-top: 10px;
+}
+
+.btn-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 8px 16px;
+  border-radius: 12px;
+  background: var(--surface-2);
+  color: var(--text);
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: var(--elev);
+}
+
+.chip.service svg {
+  flex: none;
+}
+
+/* schematic map */
+.schematic {
+  padding: 10px;
+}
+
+.schematic svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--r-sm);
+  background: var(--surface-2);
+}
+
+.schematic .grid {
+  stroke: var(--surface-3);
+  stroke-width: 0.6;
+}
+
+.schematic .marker {
+  cursor: pointer;
+}
+
+.schematic figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.legend {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.legend i {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.7); opacity: 0.45; }
+  70% { transform: scale(1.15); opacity: 0.1; }
+  100% { transform: scale(0.7); opacity: 0.45; }
+}
+
+.schematic .pulse {
+  animation: pulse 2s ease-in-out infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+/* avisos */
+.estado-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 8px;
+}
+
+.estado-card {
+  min-height: 52px;
+  border-radius: var(--r-md);
+  background: var(--surface-1);
+  box-shadow: var(--elev);
+  border: 2px solid transparent;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.estado-card.on {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent-bright);
+}
+
+.alert-card .alert-head {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.alert-card .alert-head svg {
+  flex: none;
+  margin-top: 3px;
+  color: var(--text-dim);
+}
+
+.alert-card .alert-head strong {
+  display: block;
+  margin-top: 2px;
+}
+
+.alert-card .alert-head .dim {
+  font-size: 13.5px;
+}
+
+.instruction-box {
+  margin-top: 12px;
+  padding: 12px 14px;
+  border-radius: var(--r-sm);
+  background: var(--accent-soft);
+  border-left: 4px solid var(--accent);
+}
+
+.instruction-box p {
+  margin-top: 4px;
 }
 
 /* ---- plan wizard ---- */
@@ -784,7 +1039,7 @@ a.card:active {
 }
 
 .actions h2 {
-  font-size: 17px;
+  font-size: 1rem;
 }
 
 /* ---- guides ---- */
@@ -794,7 +1049,7 @@ a.card:active {
 }
 
 .guide .card li {
-  font-size: 16px;
+  font-size: 0.94rem;
 }
 
 .guide .banner {
@@ -805,13 +1060,13 @@ a.card:active {
   list-style: none;
   padding: 0;
   color: var(--text-dim);
-  font-size: 14px;
+  font-size: 0.82rem;
 }
 
 .sources {
   list-style: none;
   padding: 0;
-  font-size: 15px;
+  font-size: 0.88rem;
 }
 
 .sources li {
@@ -833,7 +1088,7 @@ a.card:active {
 }
 
 .ahora-mode h1 {
-  font-size: 30px;
+  font-size: 1.76rem;
   line-height: 1.2;
 }
 
@@ -841,7 +1096,7 @@ a.card:active {
   background: var(--emergency-strong, #dc2626);
   border: 0;
   color: #fff;
-  font-size: 26px;
+  font-size: 1.53rem;
   font-weight: 800;
   padding: 26px 18px;
   border-radius: var(--r-lg);
@@ -855,7 +1110,7 @@ a.card:active {
   box-shadow: none;
   border: none;
   color: #fff;
-  font-size: 20px;
+  font-size: 1.18rem;
   padding: 10px 0;
   text-decoration: underline;
 }
@@ -866,7 +1121,7 @@ a.card:active {
 }
 
 .ahora-mode li {
-  font-size: 24px;
+  font-size: 1.41rem;
   line-height: 1.35;
   margin-top: 20px;
   font-weight: 600;
@@ -912,4 +1167,101 @@ a.card:active {
     font: 12pt/1.5 var(--sans);
     white-space: pre-wrap;
   }
+}
+
+/* ---- accessibility (NERV-inspired): text size, weight, contrast ---- */
+/* All font-sizes above are rem so these root steps scale the whole app. */
+
+:root[data-text='-1'] {
+  font-size: 15px;
+}
+
+:root[data-text='1'] {
+  font-size: 19px;
+}
+
+:root[data-text='2'] {
+  font-size: 21px;
+}
+
+:root[data-text='3'] {
+  font-size: 23.5px;
+}
+
+html[data-bold='1'] body {
+  font-weight: 600;
+}
+
+:root[data-contrast='high'] {
+  --text: #ffffff;
+  --text-dim: #ddd6cb;
+  --text-low: #b3aa9c;
+  --hairline: rgba(255, 246, 228, 0.3);
+  --elev: inset 0 0 0 1px var(--hairline);
+  --accent-bright: #ffc069;
+}
+
+:root[data-theme='light'][data-contrast='high'] {
+  --text: #000000;
+  --text-dim: #40392e;
+  --text-low: #5c5346;
+  --hairline: rgba(45, 32, 12, 0.45);
+  --elev: inset 0 0 0 1px var(--hairline), 0 1px 2px rgba(30, 20, 5, 0.06);
+  --accent-bright: #8a3e04;
+}
+
+/* ---- /ajustes settings ---- */
+
+.icon-btn {
+  width: 44px;
+  min-height: 44px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  color: var(--text-dim);
+  background: var(--surface-2);
+  box-shadow: var(--elev);
+}
+
+.setting-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 0;
+}
+
+.setting-row + .setting-row {
+  border-top: 1px solid var(--surface-3);
+  margin-top: 8px;
+  padding-top: 16px;
+}
+
+.setting-row strong {
+  display: block;
+}
+
+.setting-row .hint {
+  color: var(--text-dim);
+  font-size: 0.82rem;
+  margin-top: 2px;
+}
+
+.stepper-mini {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.stepper-mini button {
+  width: 48px;
+  padding: 6px;
+  font-weight: 800;
+}
+
+.stepper-mini output {
+  min-width: 64px;
+  text-align: center;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
 }
