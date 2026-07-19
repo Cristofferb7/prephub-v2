@@ -48,6 +48,7 @@ export function Plan() {
   const [plan, setPlan] = useState<FamilyPlan | null>(null)
   const [step, setStep] = useState(0)
   const [showQR, setShowQR] = useState(false)
+  const [printMode, setPrintMode] = useState<'plan' | 'door'>('plan')
   const [shareMsg, setShareMsg] = useState('')
   const saveTimer = useRef<ReturnType<typeof setTimeout>>(undefined)
 
@@ -341,8 +342,23 @@ export function Plan() {
               >
                 Compartir por WhatsApp
               </button>
-              <button type="button" onClick={() => window.print()}>
-                Imprimir
+              <button
+                type="button"
+                onClick={() => {
+                  setPrintMode('plan')
+                  setTimeout(() => window.print(), 60)
+                }}
+              >
+                Imprimir plan
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  setPrintMode('door')
+                  setTimeout(() => window.print(), 60)
+                }}
+              >
+                Cartel para la puerta
               </button>
               <button type="button" onClick={() => setShowQR((v) => !v)}>
                 {showQR ? 'Ocultar QR' : 'Código QR'}
@@ -419,12 +435,46 @@ export function Plan() {
         )}
       </div>
 
-      {/* Print-only card */}
-      <div className="print-card" aria-hidden="true">
-        <h1>Plan familiar de emergencia</h1>
-        <pre>{planToText(plan)}</pre>
-        <p>Actualizado: {new Date(plan.updatedAt).toLocaleDateString('es-VE')}</p>
-      </div>
+      {/* Print-only content */}
+      {printMode === 'plan' ? (
+        <div className="print-card" aria-hidden="true">
+          <h1>Plan familiar de emergencia</h1>
+          <pre>{planToText(plan)}</pre>
+          <p>Actualizado: {new Date(plan.updatedAt).toLocaleDateString('es-VE')}</p>
+        </div>
+      ) : (
+        /* Door sign (FEMA pattern): tape it to the door after evacuating so
+           rescuers and neighbors don't waste time searching. Two halves —
+           circle one, or cut and use the side that applies. */
+        <div className="print-card door-sign" aria-hidden="true">
+          <section>
+            <h1>ESTAMOS BIEN</h1>
+            <p>
+              Salimos de esta casa. Vamos a:{' '}
+              <strong>{plan.meetingPoints.neighborhood || '________________'}</strong>
+            </p>
+            <p>
+              Contacto: <strong>{plan.outOfTownContact.name || '____________'}</strong> ·{' '}
+              <strong>{plan.outOfTownContact.phone || '____________'}</strong>
+            </p>
+          </section>
+          <hr />
+          <section>
+            <h1>NECESITAMOS AYUDA</h1>
+            <p>
+              Somos <strong>{plan.members.length || '__'}</strong> personas.
+              {plan.members.some((m) => m.medicalNeeds.trim())
+                ? ' Condiciones médicas: ' +
+                  plan.members
+                    .filter((m) => m.medicalNeeds.trim())
+                    .map((m) => `${m.name}: ${m.medicalNeeds}`)
+                    .join('; ')
+                : ''}
+            </p>
+            <p>Avisar al 911 o a los vecinos.</p>
+          </section>
+        </div>
+      )}
     </div>
   )
 }

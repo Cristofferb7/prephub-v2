@@ -43,4 +43,16 @@ describe('featureToAlert', () => {
     expect(featureToAlert(feature(null))).toBeNull()
     expect(featureToAlert(feature(4.5, { place: null }))?.headline).toContain('Venezuela')
   })
+
+  it('enriches with DYFI felt reports, PAGER level, and the event link', () => {
+    const f = feature(5.8)
+    f.properties = { ...f.properties, felt: 769, alert: 'red', url: 'https://earthquake.usgs.gov/earthquakes/eventpage/abc123' }
+    const a = featureToAlert(f)
+    expect(a?.description).toContain('769 personas lo reportaron como sentido')
+    expect(a?.description).toContain('PAGER')
+    expect(a?.link).toContain('eventpage/abc123')
+    // green/quiet events get no PAGER mention
+    const quiet = featureToAlert(feature(4.5))
+    expect(quiet?.description).not.toContain('PAGER')
+  })
 })

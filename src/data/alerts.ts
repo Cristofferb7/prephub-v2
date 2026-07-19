@@ -23,6 +23,8 @@ export interface Alert {
   expires?: string
   source: string // e.g. 'FUNVISIS', 'INAMEH', 'USGS', 'DEMO'
   demo: boolean
+  /** Optional outlink (e.g. USGS event page with "¿Lo sentiste?" report form). */
+  link?: string
 }
 
 export const SEVERITY_LABEL: Record<AlertSeverity, string> = {

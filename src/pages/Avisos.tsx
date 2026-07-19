@@ -208,6 +208,13 @@ export function Avisos() {
                   <strong>Qué hacer</strong>
                   <p>{a.instruction}</p>
                 </div>
+                {a.link && !a.demo && (
+                  <p className="dim">
+                    <a href={a.link} target="_blank" rel="noreferrer">
+                      ¿Lo sentiste? Repórtalo al USGS →
+                    </a>
+                  </p>
+                )}
               </div>
             )}
           </article>

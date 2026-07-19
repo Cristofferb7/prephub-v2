@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import {
   PLACE_STATUS_LABEL,
   SERVICE_LABEL,
+  VERIFIED_LABEL,
   distanceKm,
   type Place,
   type PlaceService,
@@ -96,7 +97,8 @@ export function Cerca() {
       </header>
 
       <div className="banner" role="note">
-        <strong>Modo demostración</strong> — estos datos no son reales.
+        Hospitales, clínicas y puntos de agua son <strong>datos reales de OpenStreetMap</strong>{' '}
+        (ubicación conocida, estado sin confirmar). Los puntos marcados DEMO son de ejemplo.
       </div>
 
       <div className="seg-control no-print" role="group" aria-label="Vista">
@@ -178,10 +180,12 @@ export function Cerca() {
                       {SERVICE_LABEL[s]}
                     </span>
                   ))}
-                  <span className="chip demo">DEMO · datos de ejemplo</span>
+                  {p.verifiedBy === 'demo' && (
+                    <span className="chip demo">DEMO · datos de ejemplo</span>
+                  )}
                 </div>
                 <p className="dim place-meta">
-                  Actualizado: {shortDate(p.updatedAt)} · Fuente: datos de ejemplo
+                  Actualizado: {shortDate(p.updatedAt)} · Fuente: {VERIFIED_LABEL[p.verifiedBy]}
                 </p>
                 {open && (
                   <div className="place-detail">
@@ -222,8 +226,8 @@ export function Cerca() {
       {view === 'mapa' && <SchematicMap places={shown} pos={pos} onPick={openFromMap} />}
 
       <p className="status">
-        Mapa real (descarga de tu ciudad, ~30–80 MB) llegará en una fase futura. Este es un
-        esquema de demostración.
+        Datos de lugares © colaboradores de OpenStreetMap. Mapa real (descarga de tu ciudad)
+        llegará en una fase futura.
       </p>
     </div>
   )

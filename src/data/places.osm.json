@@ -1,0 +1,2043 @@
+[
+ {
+  "id": "osm-node-1148587225",
+  "name": "Módulo de Las Adjuntas",
+  "municipio": "Caracas",
+  "lat": 10.4259542,
+  "lng": -67.0148607,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-1212712915",
+  "name": "Dispensario La Rosaleda",
+  "municipio": "Caracas",
+  "lat": 10.3652769,
+  "lng": -66.9763715,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-1212712935",
+  "name": "Caritas",
+  "municipio": "Caracas",
+  "lat": 10.3736272,
+  "lng": -66.9486166,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-1861065800",
+  "name": "Medis",
+  "municipio": "Caracas",
+  "lat": 10.4670053,
+  "lng": -66.8712815,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-2175501883",
+  "name": "Clínica Santa Ines",
+  "municipio": "Caracas",
+  "lat": 10.4662378,
+  "lng": -66.9743536,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-2227491753",
+  "name": "Ambulatorio Urbano Tipo I",
+  "municipio": "Caracas",
+  "lat": 10.4750862,
+  "lng": -66.9502464,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-2247024206",
+  "name": "Rescarven",
+  "municipio": "Caracas",
+  "lat": 10.4746037,
+  "lng": -66.9451476,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-2258508190",
+  "name": "Clínica Amay (Consulta Externa)",
+  "municipio": "Caracas",
+  "lat": 10.4887149,
+  "lng": -66.9358085,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-2258508202",
+  "name": "Clínica Amay",
+  "municipio": "Caracas",
+  "lat": 10.4885133,
+  "lng": -66.935473,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-2295980247",
+  "name": "Clínica Panamericana",
+  "municipio": "Caracas",
+  "lat": 10.5160173,
+  "lng": -66.945416,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-2302891117",
+  "name": "Módulo de Sierra Maestra",
+  "municipio": "Caracas",
+  "lat": 10.5050707,
+  "lng": -66.932713,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-2315371024",
+  "name": "Instituto Popular para los Ojos \"F. Belisario-Navarro\"",
+  "municipio": "Caracas",
+  "lat": 10.514649,
+  "lng": -66.9075405,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-2362558745",
+  "name": "Clínica Casablanca",
+  "municipio": "Caracas",
+  "lat": 10.5223229,
+  "lng": -66.9064488,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-2363281552",
+  "name": "IVSS Ambulatorio Dr. Ángel Vicente Ochoa",
+  "municipio": "Caracas",
+  "lat": 10.4828998,
+  "lng": -66.9143909,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-2376698834",
+  "name": "Clínica Jiménez Muñóz",
+  "municipio": "Caracas",
+  "lat": 10.4843359,
+  "lng": -66.8980853,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-2381738014",
+  "name": "Clínica Nueva Caracas",
+  "municipio": "Caracas",
+  "lat": 10.4790541,
+  "lng": -66.8912165,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-2381738070",
+  "name": "Policlínica Cristóbal Rojas",
+  "municipio": "Caracas",
+  "lat": 10.4770272,
+  "lng": -66.8902643,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-2381738078",
+  "name": "Instituto Metropolitano de Cirugía",
+  "municipio": "Caracas",
+  "lat": 10.4778659,
+  "lng": -66.8904574,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-2381776987",
+  "name": "Clínica Cemo",
+  "municipio": "Caracas",
+  "lat": 10.4787099,
+  "lng": -66.8895937,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-2381776988",
+  "name": "Clínica Jaimes Córdova",
+  "municipio": "Caracas",
+  "lat": 10.4800155,
+  "lng": -66.8901463,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-2385689354",
+  "name": "Módulo de La Hacienda",
+  "municipio": "Caracas",
+  "lat": 10.4357717,
+  "lng": -66.9587921,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-2388925479",
+  "name": "Ambulatorio Monseñor de Castro",
+  "municipio": "Caracas",
+  "lat": 10.4983118,
+  "lng": -66.9171244,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-2389854094",
+  "name": "Clínica Venezuela",
+  "municipio": "Caracas",
+  "lat": 10.5040419,
+  "lng": -66.9037773,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-2389854147",
+  "name": "Clínica Sthory Ruíz",
+  "municipio": "Caracas",
+  "lat": 10.503541,
+  "lng": -66.9046517,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-2397974364",
+  "name": "Policlínica El Conde",
+  "municipio": "Caracas",
+  "lat": 10.4980342,
+  "lng": -66.9040912,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-2401996435",
+  "name": "Centro Clínico Caracas",
+  "municipio": "Caracas",
+  "lat": 10.5106704,
+  "lng": -66.8984466,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-2402932747",
+  "name": "Unidad Quirúrgica Los Sauces",
+  "municipio": "Caracas",
+  "lat": 10.5129473,
+  "lng": -66.8954291,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-2402932750",
+  "name": "Unidad Quirúrgica Cinco",
+  "municipio": "Caracas",
+  "lat": 10.5127929,
+  "lng": -66.894894,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-2402932762",
+  "name": "Clínica La Concepción",
+  "municipio": "Caracas",
+  "lat": 10.5119983,
+  "lng": -66.8955426,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-2402932778",
+  "name": "Centro Médico Yolanda Katz",
+  "municipio": "Caracas",
+  "lat": 10.5156326,
+  "lng": -66.9004162,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-2402932779",
+  "name": "Unidad de Especialidades Oftalmológicas (UDEO)",
+  "municipio": "Caracas",
+  "lat": 10.5131455,
+  "lng": -66.8955869,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-2402932827",
+  "name": "IECO Clínica del Lenguaje",
+  "municipio": "Caracas",
+  "lat": 10.5136348,
+  "lng": -66.8934846,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-2402932841",
+  "name": "Instituto de Neurologia (INNAP)",
+  "municipio": "Caracas",
+  "lat": 10.5136126,
+  "lng": -66.8956902,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-2435901621",
+  "name": "Centro Médico Solano",
+  "municipio": "Caracas",
+  "lat": 10.4959427,
+  "lng": -66.8783228,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-2438094703",
+  "name": "Centro Clínico Las Delicias",
+  "municipio": "Caracas",
+  "lat": 10.4941892,
+  "lng": -66.8739056,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-2439779221",
+  "name": "Centro Médico Integral",
+  "municipio": "Caracas",
+  "lat": 10.4905022,
+  "lng": -66.8706708,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-2452332911",
+  "name": "Centro Clínico Quirúrgico Virgen Milagrosa",
+  "municipio": "Caracas",
+  "lat": 10.5161898,
+  "lng": -66.9441731,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-2454826577",
+  "name": "IDET Centro",
+  "municipio": "Caracas",
+  "lat": 10.5085488,
+  "lng": -66.913511,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-2470453217",
+  "name": "Centro Médico Bosque Ávila",
+  "municipio": "Caracas",
+  "lat": 10.4961803,
+  "lng": -66.8704508,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-2496282399",
+  "name": "Clínica Oftalmológica Campo Alegre",
+  "municipio": "Caracas",
+  "lat": 10.4940836,
+  "lng": -66.8600412,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-2498778567",
+  "name": "Ambulatorio de Bello Campo",
+  "municipio": "Caracas",
+  "lat": 10.4924125,
+  "lng": -66.8505105,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-2498778573",
+  "name": "Clínica Bello Campo",
+  "municipio": "Caracas",
+  "lat": 10.4937818,
+  "lng": -66.8522642,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-2513039557",
+  "name": "Centro Médico Profesional La Carlota",
+  "municipio": "Caracas",
+  "lat": 10.4910137,
+  "lng": -66.834791,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-2513039627",
+  "name": "Clínica La Carlota",
+  "municipio": "Caracas",
+  "lat": 10.4919869,
+  "lng": -66.8337338,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-2621387266",
+  "name": "Módulo de Petare",
+  "municipio": "Caracas",
+  "lat": 10.4789,
+  "lng": -66.812837,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-2795655243",
+  "name": "Módulo Salvador Allende",
+  "municipio": "Caracas",
+  "lat": 10.4816732,
+  "lng": -66.8517197,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-2795701941",
+  "name": "Centro Clinico de Ojos Chuao",
+  "municipio": "Caracas",
+  "lat": 10.4807956,
+  "lng": -66.8444229,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-2807025323",
+  "name": "Servicios Respiratorios del Este EME",
+  "municipio": "Caracas",
+  "lat": 10.4734511,
+  "lng": -66.8419489,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-2819506360",
+  "name": "Unidad Oftalmológica de Caracas",
+  "municipio": "Caracas",
+  "lat": 10.4633083,
+  "lng": -66.8400047,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-3147543492",
+  "name": "Centro Médico Salamanca",
+  "municipio": "Caracas",
+  "lat": 10.4887444,
+  "lng": -66.8781096,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-3160530046",
+  "name": "Centro Médico Quirurgico El Paraiso",
+  "municipio": "Caracas",
+  "lat": 10.4790827,
+  "lng": -66.9415696,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-3171445108",
+  "name": "Módulo II Centro Diagnóstico Docente Las Mercedes",
+  "municipio": "Caracas",
+  "lat": 10.4813787,
+  "lng": -66.8573865,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-3418010178",
+  "name": "Módulo de La Carlota",
+  "municipio": "Caracas",
+  "lat": 10.4925198,
+  "lng": -66.8341786,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-3583767394",
+  "name": "Módulo de Los Salias",
+  "municipio": "Caracas",
+  "lat": 10.3736808,
+  "lng": -66.9680669,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-4288076389",
+  "name": "Centro Clínico Torre Los Rosales",
+  "municipio": "Caracas",
+  "lat": 10.4813258,
+  "lng": -66.9023796,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-4716301176",
+  "name": "Instituto de Asma, Alergía e Inmunología",
+  "municipio": "Caracas",
+  "lat": 10.4919128,
+  "lng": -66.8524694,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-4984940897",
+  "name": "Clínica Oftalmológica Sirit",
+  "municipio": "Caracas",
+  "lat": 10.504605,
+  "lng": -66.8474674,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-5412852923",
+  "name": "Ambulatorio Dr. José María Vargas",
+  "municipio": "Caracas",
+  "lat": 10.4510029,
+  "lng": -66.8622489,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-5412906521",
+  "name": "Policlínica Fátima",
+  "municipio": "Caracas",
+  "lat": 10.4463189,
+  "lng": -66.8634165,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-5651652822",
+  "name": "Centro Quirúrgico San Antonio",
+  "municipio": "Caracas",
+  "lat": 10.5035192,
+  "lng": -66.8427232,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-1138326062",
+  "name": "Hospital Oncológico Dr. Miguel Pérez Carreño",
+  "municipio": "Valencia",
+  "lat": 10.2839639,
+  "lng": -68.0096167,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-1788465637",
+  "name": "Módulo La Vivienda",
+  "municipio": "Valencia",
+  "lat": 10.1775227,
+  "lng": -67.9429757,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-2334715763",
+  "name": "Ambulatorio La Guasima",
+  "municipio": "Valencia",
+  "lat": 10.1264715,
+  "lng": -68.0944185,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-3315750227",
+  "name": "Hospital Metropolitano del Norte",
+  "municipio": "Naguanagua",
+  "lat": 10.2551532,
+  "lng": -68.0068712,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-3654506421",
+  "name": "ADMINISTRACIÓN DE SERVICIOS DE SALUD LAS 24 HORAS",
+  "municipio": "Valencia",
+  "lat": 10.1881475,
+  "lng": -67.9400286,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-4248368692",
+  "name": "Movilab",
+  "municipio": "Valencia",
+  "lat": 10.2202827,
+  "lng": -68.0133227,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-4326312990",
+  "name": "San Francisco de Asis",
+  "municipio": "Valencia",
+  "lat": 10.1828252,
+  "lng": -67.9995337,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-4326323690",
+  "name": "El Gran Poder de Dios",
+  "municipio": "Valencia",
+  "lat": 10.1857406,
+  "lng": -68.0079098,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-4327146992",
+  "name": "Policlínica los Guayos",
+  "municipio": "Valencia",
+  "lat": 10.1886214,
+  "lng": -67.9391282,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-4360712098",
+  "name": "Clínica Naguanagua",
+  "municipio": "Valencia",
+  "lat": 10.2787158,
+  "lng": -68.0184079,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-4464733891",
+  "name": "Dr. Luis Guada Lacau",
+  "municipio": "Naguanagua",
+  "lat": 10.253438,
+  "lng": -68.017905,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-4468939789",
+  "name": "CDI La Granja",
+  "municipio": "Valencia",
+  "lat": 10.2394863,
+  "lng": -68.0121105,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-4486007189",
+  "name": "Multisalud",
+  "municipio": "Valencia",
+  "lat": 10.2054808,
+  "lng": -68.0047892,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-4518879387",
+  "name": "Ceoval",
+  "municipio": "Valencia",
+  "lat": 10.2226809,
+  "lng": -68.0104775,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-5097926449",
+  "name": "Grupo Medico Valencia Plaza",
+  "municipio": "Valencia",
+  "lat": 10.1695742,
+  "lng": -68.0064334,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-5185655220",
+  "name": "Ambulatorio de San Diego",
+  "municipio": "Valencia",
+  "lat": 10.2555197,
+  "lng": -67.9537029,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-5226504127",
+  "name": "Clínica Renace",
+  "municipio": "Valencia",
+  "lat": 10.2084253,
+  "lng": -68.0099762,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-5226575023",
+  "name": "Clínica Dr. Amauri Rangel",
+  "municipio": "Valencia",
+  "lat": 10.2062479,
+  "lng": -68.0087913,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-5252073644",
+  "name": "Ambulatorio Los Guayos",
+  "municipio": "Valencia",
+  "lat": 10.1890528,
+  "lng": -67.9366932,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-5390267224",
+  "name": "Centro Médico Sinai",
+  "municipio": "Valencia",
+  "lat": 10.1864647,
+  "lng": -68.0002161,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-6704208377",
+  "name": "San Rafael",
+  "municipio": "Valencia",
+  "lat": 10.1731696,
+  "lng": -67.9951791,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-6704208378",
+  "name": "CENTRO RESONANCIA MAGNETICA",
+  "municipio": "Valencia",
+  "lat": 10.172873,
+  "lng": -67.9944901,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-7802404245",
+  "name": "Centro Médico La Viñita",
+  "municipio": "Valencia",
+  "lat": 10.2593648,
+  "lng": -68.0171251,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-7817457350",
+  "name": "Ambulatorio Ciudad Alianza",
+  "municipio": "Valencia",
+  "lat": 10.2002826,
+  "lng": -67.9000136,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-7817457366",
+  "name": "CDI Ciudad Alianza",
+  "municipio": "Valencia",
+  "lat": 10.2011455,
+  "lng": -67.9004968,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-8018458564",
+  "name": "Consultorio Medico Apamates",
+  "municipio": "Valencia",
+  "lat": 10.1265608,
+  "lng": -67.9747378,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-13019494941",
+  "name": "Ambulatorio La Isabélica",
+  "municipio": "Valencia",
+  "lat": 10.1595279,
+  "lng": -67.9786705,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-13019494948",
+  "name": "Policlínicas Elohim Valencia",
+  "municipio": "Valencia",
+  "lat": 10.1672257,
+  "lng": -67.9679053,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-154966122",
+  "name": "Policlínico La Viña",
+  "municipio": "Valencia",
+  "lat": 10.219906,
+  "lng": -68.0160027,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-165083776",
+  "name": "Ciudad Hospitalaria Doctor Enrique Tejera",
+  "municipio": "Valencia",
+  "lat": 10.1703701,
+  "lng": -68.0190587,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-165129381",
+  "name": "IVSS Seguro Social, JV Seijas",
+  "municipio": "Valencia",
+  "lat": 10.1634823,
+  "lng": -68.0243027,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-169160591",
+  "name": "Clinica La Isabélica",
+  "municipio": "Valencia",
+  "lat": 10.1633142,
+  "lng": -67.972436,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-174619997",
+  "name": "Módulo de La Isabélica",
+  "municipio": "Valencia",
+  "lat": 10.1577371,
+  "lng": -67.9593587,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-176538678",
+  "name": "Centro Médico Valle de San Diego",
+  "municipio": "Valencia",
+  "lat": 10.2214038,
+  "lng": -67.965211,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-176538680",
+  "name": "Centro Médico de Especialidades Pediátricas Dr. José Gregorio Hernández (Hospitalito)",
+  "municipio": "Valencia",
+  "lat": 10.2251135,
+  "lng": -67.959478,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-203959433",
+  "name": "Clínica IEQ Los Mangos",
+  "municipio": "Valencia",
+  "lat": 10.1972203,
+  "lng": -68.0264574,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-205422090",
+  "name": "Instituto Docente de Urología",
+  "municipio": "Valencia",
+  "lat": 10.2204203,
+  "lng": -68.015432,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-224392711",
+  "name": "CDI Yagua",
+  "municipio": "Yagua",
+  "lat": 10.261227,
+  "lng": -67.9051638,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-274468470",
+  "name": "Módulo Las Chimeneas",
+  "municipio": "Valencia",
+  "lat": 10.1976834,
+  "lng": -68.0006465,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-318658060",
+  "name": "Hospital Oncológico Dr Miguel Pérez Carreño",
+  "municipio": "Valencia",
+  "lat": 10.2836462,
+  "lng": -68.0104964,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-319608083",
+  "name": "Clínica Celis Pérez",
+  "municipio": "Valencia",
+  "lat": 10.1808989,
+  "lng": -68.0054794,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-319640139",
+  "name": "Hospital Universitaro Dr. Ángel Larralde",
+  "municipio": "Valencia",
+  "lat": 10.2908017,
+  "lng": -68.00027,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-321067348",
+  "name": "Clínica El Morro",
+  "municipio": "Valencia",
+  "lat": 10.2179983,
+  "lng": -67.9643047,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-366870602",
+  "name": "IVSS Paraparal",
+  "municipio": "Los Guayos",
+  "lat": 10.1846821,
+  "lng": -67.9160449,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-366870756",
+  "name": "Módulo Paraparal",
+  "municipio": "Valencia",
+  "lat": 10.1858729,
+  "lng": -67.9194972,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-384056778",
+  "name": "Maternidad del Este",
+  "municipio": "Valencia",
+  "lat": 10.1895115,
+  "lng": -67.9966339,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-384099583",
+  "name": "Ambulatorio La Michelena",
+  "municipio": "Valencia",
+  "lat": 10.1764092,
+  "lng": -67.9927724,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-384262194",
+  "name": "Hospital de la Cruz Roja",
+  "municipio": "Valencia",
+  "lat": 10.2064456,
+  "lng": -68.0105935,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-386419439",
+  "name": "Cliníca Los Colorados",
+  "municipio": "Valencia",
+  "lat": 10.1932202,
+  "lng": -68.0099996,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-386419672",
+  "name": "Módulo Valencia Centro",
+  "municipio": "Valencia",
+  "lat": 10.184115,
+  "lng": -68.0013431,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-392111414",
+  "name": "Centro Médico Dr. Rafael Guerra Méndez",
+  "municipio": "Valencia",
+  "lat": 10.1852868,
+  "lng": -67.9996424,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-392114596",
+  "name": "Maternidad del Sur",
+  "municipio": "Valencia",
+  "lat": 10.1449142,
+  "lng": -67.9994898,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-408752480",
+  "name": "Clínica Santa Maria",
+  "municipio": "Valencia",
+  "lat": 10.186396,
+  "lng": -67.9920566,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-418848246",
+  "name": "Clínica Venezuela",
+  "municipio": "Valencia",
+  "lat": 10.186806,
+  "lng": -68.0072969,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-419811021",
+  "name": "Módulo La Manguita",
+  "municipio": "Valencia",
+  "lat": 10.1911761,
+  "lng": -68.03022,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-423711501",
+  "name": "Clinica El Viñedo",
+  "municipio": "Valencia",
+  "lat": 10.2118839,
+  "lng": -68.0122716,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-423721978",
+  "name": "Policlínica Cetven",
+  "municipio": "El Viñedo",
+  "lat": 10.212058,
+  "lng": -68.0140131,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-466172996",
+  "name": "Módulo de El Palotal",
+  "municipio": "Valencia",
+  "lat": 10.1622197,
+  "lng": -68.0069079,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-510856802",
+  "name": "Instituto Venezolano de los Seguros Sociales - IVSS",
+  "municipio": "Valencia",
+  "lat": 10.1772169,
+  "lng": -67.9794682,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-532659049",
+  "name": "Clinica Los Jarales",
+  "municipio": "SAN DIEGO",
+  "lat": 10.2137288,
+  "lng": -67.9628373,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-1243862983",
+  "name": "Maternidad La Floresta",
+  "municipio": "Maracay",
+  "lat": 10.2680477,
+  "lng": -67.5878467,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-1270713428",
+  "name": "Centro Quirurgico Maracay",
+  "municipio": "Maracay",
+  "lat": 10.2722912,
+  "lng": -67.5871023,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-1397487234",
+  "name": "Cruz Roja",
+  "municipio": "Maracay",
+  "lat": 10.2509093,
+  "lng": -67.601277,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-2340883971",
+  "name": "Ambulatorio La Cabrera",
+  "municipio": "Maracay",
+  "lat": 10.2779864,
+  "lng": -67.6685446,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-2350996224",
+  "name": "Ambulatorio de Paraparal",
+  "municipio": "Maracay",
+  "lat": 10.201018,
+  "lng": -67.5820823,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-2581716912",
+  "name": "Hospital de Los Samanes",
+  "municipio": "Maracay",
+  "lat": 10.2193974,
+  "lng": -67.5930145,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-2791869263",
+  "name": "Centro de Especialidades Calicanto",
+  "municipio": "Maracay",
+  "lat": 10.2533696,
+  "lng": -67.5997695,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-2791869269",
+  "name": "Unidad Medica Integral La Maestranza",
+  "municipio": "Maracay",
+  "lat": 10.2543886,
+  "lng": -67.5994185,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-3249512541",
+  "name": "Clinica Calicanto",
+  "municipio": "Maracay",
+  "lat": 10.253902,
+  "lng": -67.5973699,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-4471891991",
+  "name": "Policlínica Coromoto",
+  "municipio": "Maracay",
+  "lat": 10.2610168,
+  "lng": -67.616018,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-5060407388",
+  "name": "Unidad Quirurgica Maracay",
+  "municipio": "Maracay",
+  "lat": 10.2552574,
+  "lng": -67.5975031,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-5179174121",
+  "name": "centro médico Oftalmologico Santa Lucía Ca",
+  "municipio": "Maracay",
+  "lat": 10.2529458,
+  "lng": -67.6001653,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-5179184021",
+  "name": "Unidad Quirúrgica Oftalmológica Santa Lucía CA",
+  "municipio": "Maracay",
+  "lat": 10.2535721,
+  "lng": -67.6000214,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-5298314132",
+  "name": "Clínica El Carmen",
+  "municipio": "Maracay",
+  "lat": 10.2472645,
+  "lng": -67.59628,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-106341938",
+  "name": "Centro Médico Maracay",
+  "municipio": "Maracay",
+  "lat": 10.2577316,
+  "lng": -67.5912598,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-129662405",
+  "name": "Hospital Militar",
+  "municipio": "Maracay",
+  "lat": 10.2472476,
+  "lng": -67.5738453,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-155060801",
+  "name": "Corposalud - Aragua",
+  "municipio": "Maracay",
+  "lat": 10.2711209,
+  "lng": -67.5826641,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-228450550",
+  "name": "Ambulatorio del Norte",
+  "municipio": "Maracay",
+  "lat": 10.2685269,
+  "lng": -67.5812697,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-240212692",
+  "name": "Hospital Carabaño Tosta",
+  "municipio": "Maracay",
+  "lat": 10.2429505,
+  "lng": -67.5853202,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-252060177",
+  "name": "SRI",
+  "municipio": "Maracay",
+  "lat": 10.2143749,
+  "lng": -67.5898365,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-274472077",
+  "name": "Torre Calicanto",
+  "municipio": "Maracay",
+  "lat": 10.2558241,
+  "lng": -67.5987088,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-416774621",
+  "name": "Clínica Lugo",
+  "municipio": "Maracay",
+  "lat": 10.2583107,
+  "lng": -67.6041083,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-416793443",
+  "name": "Módulo",
+  "municipio": "Maracay-Caña de Azúcar",
+  "lat": 10.2739295,
+  "lng": -67.6248888,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-418717898",
+  "name": "Centro Clinico Universitario La Morita",
+  "municipio": "Maracay",
+  "lat": 10.2130676,
+  "lng": -67.5570898,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-440126910",
+  "name": "Cardiologico Maracay",
+  "municipio": "Maracay",
+  "lat": 10.2790399,
+  "lng": -67.5834977,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-479125091",
+  "name": "Módulo Las Acacias",
+  "municipio": "Maracay",
+  "lat": 10.2321243,
+  "lng": -67.5830403,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-510057611",
+  "name": "Hospital Central de Maracay",
+  "municipio": "Maracay",
+  "lat": 10.2744913,
+  "lng": -67.5895483,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-510058121",
+  "name": "Anticanceroso Maracay",
+  "municipio": "Maracay",
+  "lat": 10.2752752,
+  "lng": -67.5876814,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-1096455953",
+  "name": "Policlínica Maracay",
+  "municipio": "Maracay",
+  "lat": 10.2538458,
+  "lng": -67.5997884,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-1096455955",
+  "name": "Clínica La Maestranza",
+  "municipio": "Maracay",
+  "lat": 10.2540993,
+  "lng": -67.599651,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-1097399053",
+  "name": "Clínica Guadalupe",
+  "municipio": "Maracay",
+  "lat": 10.2554022,
+  "lng": -67.5978976,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-1097409517",
+  "name": "Clínica Calicanto",
+  "municipio": "Maracay",
+  "lat": 10.2541169,
+  "lng": -67.5975568,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-1099358494",
+  "name": "Edificio Anexo Maternidad La Floresta",
+  "municipio": "Maracay",
+  "lat": 10.2676811,
+  "lng": -67.5882259,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-1271038945",
+  "name": "CANAOBRE",
+  "municipio": "Maracay",
+  "lat": 10.2493602,
+  "lng": -67.6045296,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-1301806310",
+  "name": "Policlínica Andrés Bello",
+  "municipio": "Maracay",
+  "lat": 10.26088,
+  "lng": -67.5827883,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-way-1329511884",
+  "name": "Centro Médico Quirúrgico Aragua",
+  "municipio": "Maracay",
+  "lat": 10.2314366,
+  "lng": -67.5875207,
+  "status": "sin_confirmar",
+  "services": [
+   "medicinas"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ },
+ {
+  "id": "osm-node-11666056769",
+  "name": "Mistral",
+  "municipio": "Maracay",
+  "lat": 10.236074,
+  "lng": -67.6280377,
+  "status": "sin_confirmar",
+  "services": [
+   "agua"
+  ],
+  "verifiedBy": "osm",
+  "updatedAt": "2026-07-19"
+ }
+]

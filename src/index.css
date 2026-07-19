@@ -1355,3 +1355,30 @@ body {
     grid-column: 1 / -1;
   }
 }
+
+/* ---- door sign (print-only, FEMA "OK / HELP" pattern) ---- */
+
+.door-sign section {
+  height: 46vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 0 6%;
+}
+
+.door-sign h1 {
+  font-size: 64pt;
+  letter-spacing: 0.02em;
+}
+
+.door-sign p {
+  font-size: 16pt;
+  margin-top: 14pt;
+  line-height: 1.4;
+}
+
+.door-sign hr {
+  border: none;
+  border-top: 2pt dashed #000;
+}

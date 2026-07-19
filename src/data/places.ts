@@ -16,8 +16,16 @@ export interface Place {
   status: PlaceStatus
   services: PlaceService[]
   note?: string
-  verifiedBy: 'proteccion_civil' | 'cruz_roja' | 'comunidad' | 'demo'
+  verifiedBy: 'proteccion_civil' | 'cruz_roja' | 'comunidad' | 'demo' | 'osm'
   updatedAt: string // ISO date
+}
+
+export const VERIFIED_LABEL: Record<Place['verifiedBy'], string> = {
+  proteccion_civil: 'Protección Civil',
+  cruz_roja: 'Cruz Roja',
+  comunidad: 'Comunidad',
+  demo: 'datos de ejemplo',
+  osm: 'OpenStreetMap',
 }
 
 export const PLACE_STATUS_LABEL: Record<PlaceStatus, string> = {

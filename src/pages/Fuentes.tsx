@@ -111,6 +111,10 @@ export function Fuentes() {
           <strong>En una emergencia, sigue siempre las instrucciones de las autoridades locales.</strong>
         </p>
         <ul className="sources">
+          <li>
+            <strong>OpenStreetMap</strong> — ubicaciones de hospitales, clínicas y puntos de
+            agua en «Cerca de ti». Datos © colaboradores de OpenStreetMap (licencia ODbL).
+          </li>
           {SOURCES.map((s) => (
             <li key={s.name}>
               <strong>{s.name}</strong>

@@ -33,7 +33,19 @@ const FEED_URL = () => {
 
 interface UsgsFeature {
   id: string
-  properties: { mag: number | null; place: string | null; time: number; tsunami?: number }
+  properties: {
+    mag: number | null
+    place: string | null
+    time: number
+    tsunami?: number
+    /** DYFI: how many people reported feeling it, and community intensity. */
+    felt?: number | null
+    cdi?: number | null
+    /** PAGER impact level: green | yellow | orange | red. */
+    alert?: string | null
+    /** USGS event page (has the "Did you feel it?" report form). */
+    url?: string
+  }
   geometry: { coordinates: [number, number, number] }
 }
 
@@ -51,12 +63,24 @@ export function featureToAlert(f: UsgsFeature): Alert | null {
   const depthKm = Math.round(f.geometry.coordinates[2])
   const place = f.properties.place ?? 'Venezuela'
   const severity = severityForMagnitude(mag)
+  const extras: string[] = []
+  if (f.properties.felt && f.properties.felt > 0) {
+    extras.push(
+      `${f.properties.felt} ${f.properties.felt === 1 ? 'persona lo reportó' : 'personas lo reportaron'} como sentido (DYFI)`,
+    )
+  }
+  const pager = f.properties.alert
+  if (pager === 'orange' || pager === 'red') {
+    extras.push('nivel de impacto USGS PAGER: alto')
+  }
   return {
     id: `usgs-${f.id}`,
     category: 'sismo',
     severity,
     headline: `Sismo de magnitud ${mag.toFixed(1)} — ${place}`,
-    description: `USGS registró un sismo de magnitud ${mag.toFixed(1)} a ${depthKm} km de profundidad (${place}).`,
+    description:
+      `USGS registró un sismo de magnitud ${mag.toFixed(1)} a ${depthKm} km de profundidad (${place}).` +
+      (extras.length ? ` ${extras.join('. ')}.` : ''),
     instruction:
       severity === 'minor'
         ? 'Si lo sentiste, revisa tu casa con calma. Buen momento para repasar tu plan familiar.'
@@ -65,6 +89,7 @@ export function featureToAlert(f: UsgsFeature): Alert | null {
     sent: new Date(f.properties.time).toISOString(),
     source: 'USGS',
     demo: false,
+    link: f.properties.url,
   }
 }
 
