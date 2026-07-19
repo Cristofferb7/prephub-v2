@@ -18,6 +18,13 @@ export interface Setting {
   value: unknown
 }
 
+/** Checked state for one "Casa segura" hazard-hunt item (defs in src/data/casa.ts). */
+export interface CasaItemState {
+  itemId: string
+  checked: 0 | 1
+  updatedAt: string
+}
+
 export interface PlanMember {
   name: string
   phone: string
@@ -55,7 +62,15 @@ export const db = new Dexie('prephub') as Dexie & {
   kitItems: EntityTable<KitItemState, 'itemId'>
   settings: EntityTable<Setting, 'key'>
   plan: EntityTable<FamilyPlan, 'id'>
+  casaItems: EntityTable<CasaItemState, 'itemId'>
 }
+
+db.version(3).stores({
+  kitItems: 'itemId, checked, expiresAt',
+  settings: 'key',
+  plan: 'id',
+  casaItems: 'itemId, checked',
+})
 
 db.version(2).stores({
   kitItems: 'itemId, checked, expiresAt',

@@ -2,6 +2,7 @@ import { useLiveQuery } from 'dexie-react-hooks'
 import { db, getHouseholdSize, requestPersistentStorage, setHouseholdSize } from '../lib/db'
 import { KIT_CATEGORIES, KIT_ITEMS, quantityFor } from '../data/kit'
 import { kitScore } from '../lib/score'
+import { downloadKitReminder } from '../lib/ics'
 
 export function Kit() {
   const states = useLiveQuery(() => db.kitItems.toArray(), [], [])
@@ -119,6 +120,17 @@ export function Kit() {
         </section>
         )
       })}
+
+      <div className="card no-print">
+        <h2>No confíes en la memoria</h2>
+        <p className="dim">
+          Agrega un recordatorio a tu calendario para revisar agua, comida, medicinas y pilas
+          cada 6 meses. Funciona sin internet y sin notificaciones de la app.
+        </p>
+        <button type="button" onClick={downloadKitReminder}>
+          Agregar recordatorio al calendario (.ics)
+        </button>
+      </div>
 
       <p className="status">
         No hace falta comprar todo hoy. Marca lo que ya tienes en casa — suele ser más de lo que crees.

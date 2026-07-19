@@ -13,7 +13,8 @@ During the 2026 earthquakes, Venezuelans faced an information blackout in the mo
 ## What it does
 
 - **Puntuación de preparación** — one score that shows how ready your family is, with the next step always one tap away.
-- **Kit de emergencia** — 72-hour checklist (water, food, first aid, documents…) with quantities scaled to your household size and expiry tracking for water, meds, and batteries.
+- **Kit de emergencia** — 72-hour checklist (water, food, first aid, documents…) with quantities scaled to your household size, expiry tracking for water, meds, and batteries, and a downloadable recurring calendar reminder (.ics) — re-engagement without push notifications.
+- **Casa segura** — a room-by-room hazard hunt (anchor the shelves, strap the gas cylinder, clear the exits…) based on Chile's Familia Preparada method. Securing the home prevents more injuries than any kit — so it feeds the preparedness score.
 - **Plan familiar** — guided reunification plan: contacts (including an out-of-country contact — designed for the diaspora), meeting points, and emergency numbers. Share it by WhatsApp, print it (paper survives blackouts), or hand it off as a QR code.
 - **Guías offline** — during the quake, right after, safe water, essential first aid, "is it safe to go back in?", and heavy-rain/landslide guidance. Sourced from FUNVISIS, CENAPRED, SENAPRED, FEMA/Ready.gov, and PAHO — adapted into Venezuelan Spanish and credited in-app.
 - **Ahora mismo** — a stripped-down emergency mode: huge red buttons, giant text, zero navigation. Built to be used by shaking hands in the dark.

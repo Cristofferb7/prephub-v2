@@ -1,4 +1,4 @@
-import { db, type FamilyPlan, type KitItemState, type Setting } from './db'
+import { db, type CasaItemState, type FamilyPlan, type KitItemState, type Setting } from './db'
 
 interface ExportFile {
   app: 'prephub'
@@ -7,6 +7,8 @@ interface ExportFile {
   kitItems: KitItemState[]
   settings: Setting[]
   plan: FamilyPlan[]
+  /** Added later — absent in older backups. */
+  casaItems?: CasaItemState[]
   /** Display prefs (theme/text/bold/contrast) so a restore keeps them. */
   prefs?: Record<string, string>
 }
@@ -40,6 +42,7 @@ export async function exportData(): Promise<'shared' | 'downloaded' | 'cancelled
     kitItems: await db.kitItems.toArray(),
     settings: await db.settings.toArray(),
     plan: await db.plan.toArray(),
+    casaItems: await db.casaItems.toArray(),
     prefs: readPrefs(),
   }
   const json = JSON.stringify(data, null, 2)
@@ -103,12 +106,16 @@ export async function importData(file: File): Promise<{ ok: boolean; error?: str
   const plan = (Array.isArray(parsed.plan) ? parsed.plan : []).filter(
     (r) => isRecord(r) && typeof r.id === 'string' && Array.isArray(r.members),
   )
+  const casaItems = (Array.isArray(parsed.casaItems) ? parsed.casaItems : []).filter(
+    (r) => isRecord(r) && typeof r.itemId === 'string' && r.itemId.length > 0,
+  )
 
   try {
-    await db.transaction('rw', db.kitItems, db.settings, db.plan, async () => {
+    await db.transaction('rw', db.kitItems, db.settings, db.plan, db.casaItems, async () => {
       await db.kitItems.bulkPut(kitItems)
       await db.settings.bulkPut(settings)
       await db.plan.bulkPut(plan)
+      await db.casaItems.bulkPut(casaItems)
     })
   } catch {
     return { ok: false, error: 'El respaldo está dañado y no se pudo restaurar. Nada cambió.' }

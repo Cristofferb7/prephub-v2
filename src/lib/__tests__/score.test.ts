@@ -1,10 +1,16 @@
 import { describe, expect, it } from 'vitest'
-import { computeScore, kitScore, nextStep, planScore } from '../score'
+import { casaScore, computeScore, kitScore, nextStep, planScore } from '../score'
 import { KIT_ITEMS } from '../../data/kit'
-import { emptyPlan, type FamilyPlan, type KitItemState } from '../db'
+import { CASA_ITEMS } from '../../data/casa'
+import { emptyPlan, type CasaItemState, type FamilyPlan, type KitItemState } from '../db'
 
 const checked = (ids: string[]): KitItemState[] =>
   ids.map((itemId) => ({ itemId, checked: 1 as const, updatedAt: '2026-07-18T00:00:00Z' }))
+
+const casaChecked = (ids: string[]): CasaItemState[] =>
+  ids.map((itemId) => ({ itemId, checked: 1 as const, updatedAt: '2026-07-18T00:00:00Z' }))
+
+const fullCasa = () => casaChecked(CASA_ITEMS.map((i) => i.id))
 
 const fullPlan = (): FamilyPlan => {
   const p = emptyPlan()
@@ -95,7 +101,24 @@ describe('nextStep', () => {
     expect(step?.to).toBe('/plan')
   })
 
+  it('moves to casa segura when kit and plan are complete', () => {
+    const step = nextStep(checked(KIT_ITEMS.map((i) => i.id)), fullPlan())
+    expect(step?.to).toBe('/casa')
+    expect(step?.label).toBe(CASA_ITEMS[0].label)
+  })
+
   it('returns null when everything is done', () => {
-    expect(nextStep(checked(KIT_ITEMS.map((i) => i.id)), fullPlan())).toBeNull()
+    expect(nextStep(checked(KIT_ITEMS.map((i) => i.id)), fullPlan(), fullCasa())).toBeNull()
+  })
+})
+
+describe('casaScore + weights', () => {
+  it('scores the hazard hunt and weighs 40/40/20', () => {
+    expect(casaScore([])).toBe(0)
+    expect(casaScore(fullCasa())).toBe(100)
+    const s = computeScore(checked(KIT_ITEMS.map((i) => i.id)), fullPlan(), fullCasa())
+    expect(s.total).toBe(100)
+    const noCasa = computeScore(checked(KIT_ITEMS.map((i) => i.id)), fullPlan(), [])
+    expect(noCasa.total).toBe(80)
   })
 })

@@ -14,8 +14,9 @@ const itemLabel = (id: string) => KIT_ITEMS.find((i) => i.id === id)?.label ?? i
 export function Home() {
   const kitStates = useLiveQuery(() => db.kitItems.toArray(), [], [])
   const plan = useLiveQuery(() => db.plan.get('main'), [])
-  const score = computeScore(kitStates ?? [], plan)
-  const next = nextStep(kitStates ?? [], plan)
+  const casaStates = useLiveQuery(() => db.casaItems.toArray(), [], [])
+  const score = computeScore(kitStates ?? [], plan, casaStates ?? [])
+  const next = nextStep(kitStates ?? [], plan, casaStates ?? [])
   const [severeAlert, setSevereAlert] = useState<Alert | null>(null)
 
   useEffect(() => {
@@ -91,6 +92,17 @@ export function Home() {
           <div style={{ width: `${score.plan}%` }} />
         </div>
         <p>Contactos, puntos de encuentro — para compartir e imprimir.</p>
+      </Link>
+
+      <Link to="/casa" className="card progress-card">
+        <div className="progress-head">
+          <h2>Casa segura</h2>
+          <span className="pct">{score.casa}%</span>
+        </div>
+        <div className="bar" role="progressbar" aria-valuenow={score.casa} aria-valuemin={0} aria-valuemax={100} aria-label="Avance de casa segura">
+          <div style={{ width: `${score.casa}%` }} />
+        </div>
+        <p>Anclar, amarrar y despejar: que nada te caiga encima cuando tiemble.</p>
       </Link>
 
       <Link to="/cerca" className="card">

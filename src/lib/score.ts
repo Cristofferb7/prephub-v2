@@ -1,10 +1,12 @@
-import type { FamilyPlan, KitItemState } from './db'
+import type { CasaItemState, FamilyPlan, KitItemState } from './db'
 import { KIT_ITEMS } from '../data/kit'
+import { CASA_ITEMS } from '../data/casa'
 
 export interface ScoreBreakdown {
   total: number // 0–100
   kit: number // 0–100
   plan: number // 0–100
+  casa: number // 0–100
   expired: string[] // item ids past expiry
   expiringSoon: string[] // item ids within 30 days
 }
@@ -14,6 +16,13 @@ export function kitScore(states: KitItemState[]): number {
   const byId = new Map(states.map((s) => [s.itemId, s]))
   const checked = KIT_ITEMS.filter((i) => byId.get(i.id)?.checked === 1).length
   return Math.round((checked / KIT_ITEMS.length) * 100)
+}
+
+export function casaScore(states: CasaItemState[]): number {
+  if (CASA_ITEMS.length === 0) return 0
+  const byId = new Map(states.map((s) => [s.itemId, s]))
+  const checked = CASA_ITEMS.filter((i) => byId.get(i.id)?.checked === 1).length
+  return Math.round((checked / CASA_ITEMS.length) * 100)
 }
 
 /** Plan completeness: each of these counts equally. */
@@ -55,6 +64,7 @@ export function expiryStatus(states: KitItemState[]): { expired: string[]; expir
 export function nextStep(
   states: KitItemState[],
   plan: FamilyPlan | undefined,
+  casaStates: CasaItemState[] = [],
 ): { label: string; to: string; minutes: number } | null {
   const byId = new Map(states.map((s) => [s.itemId, s]))
   const unchecked = KIT_ITEMS.find((i) => byId.get(i.id)?.checked !== 1)
@@ -73,16 +83,27 @@ export function nextStep(
   ]
   const missing = planSteps.find(([done]) => !done)
   if (missing) return { label: missing[1], to: '/plan', minutes: 5 }
+
+  const casaById = new Map(casaStates.map((s) => [s.itemId, s]))
+  const casaMissing = CASA_ITEMS.find((i) => casaById.get(i.id)?.checked !== 1)
+  if (casaMissing) return { label: casaMissing.label, to: '/casa', minutes: 10 }
   return null
 }
 
-export function computeScore(states: KitItemState[], plan: FamilyPlan | undefined): ScoreBreakdown {
+/** Weights: the kit and the plan carry the score; securing the house tops it up. */
+export function computeScore(
+  states: KitItemState[],
+  plan: FamilyPlan | undefined,
+  casaStates: CasaItemState[] = [],
+): ScoreBreakdown {
   const kit = kitScore(states)
   const p = planScore(plan)
+  const casa = casaScore(casaStates)
   return {
     kit,
     plan: p,
-    total: Math.round(kit * 0.5 + p * 0.5),
+    casa,
+    total: Math.round(kit * 0.4 + p * 0.4 + casa * 0.2),
     ...expiryStatus(states),
   }
 }
