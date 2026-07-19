@@ -7,7 +7,7 @@ Spanish-first, offline-first earthquake **preparation** PWA for Venezuela. No al
 ## Hard budgets (non-negotiable)
 
 - **First-load JS+CSS < 300 KB gzipped** (hard ceiling 500 KB). Check with `npm run build` output before adding any dependency. Consider preact-compat before blowing the budget.
-- **Zero third-party domains at runtime.** No CDNs, no web fonts (system font stack only), no analytics (v1), no external images. Everything self-hosted and bundled.
+- **Zero third-party domains at runtime, with ONE amendment (July 2026):** `earthquake.usgs.gov` is allowed as an optional, graceful-degradation fetch for real past-earthquake data (Phase B of CERCA_AVISOS_SPEC.md; CORS-enabled, no key, cached in Dexie so offline users see the last snapshot). Everything else stays banned: no CDNs, no web fonts (Figtree is self-hosted via npm), no analytics (v1), no external images. The app must remain 100% functional if that fetch never succeeds.
 - **100% functional offline from first load.** Airplane-mode cold start is the acceptance test. Full precache (app + all content) well under 50 MB — realistically < 2 MB.
 - Target device: old low-end Android (~Android 8+, old Chrome WebView), ~17 Mbps network. Test with CPU throttling.
 - Every page useful without images; illustrations are inline SVG only.

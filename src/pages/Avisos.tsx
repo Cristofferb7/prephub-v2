@@ -2,13 +2,14 @@ import { useEffect, useState } from 'react'
 import {
   CATEGORY_LABEL,
   SEVERITY_LABEL,
-  demoProvider,
   type Alert,
   type AlertCategory,
 } from '../data/alerts'
 import { ESTADOS } from '../data/estados'
 import { getAreas, setAreas } from '../lib/db'
+import { getFeed } from '../lib/alertsFeed'
 import { relativeTime } from '../lib/time'
+import type { UsgsSnapshot } from '../lib/usgs'
 
 const CATEGORY_ICON: Record<AlertCategory, string> = {
   sismo: 'M2 12h3l2.5-6 4 12 3-8 2 4.5L18 12h4',
@@ -46,6 +47,8 @@ export function Avisos() {
   const [expanded, setExpanded] = useState<string | null>(null)
   const [msg, setMsg] = useState('')
   const [simKey, setSimKey] = useState(0) // bump to replay the simulacro
+  const [usgs, setUsgs] = useState<UsgsSnapshot | null>(null)
+  const [refreshing, setRefreshing] = useState(false)
 
   useEffect(() => {
     getAreas().then((a) => {
@@ -57,18 +60,30 @@ export function Avisos() {
   useEffect(() => {
     if (areas && areas.length > 0) {
       // Simulacro replays the full demo scenario regardless of areas.
-      demoProvider
-        .getActiveAlerts(simKey > 0 ? [] : areas)
-        .then((list) => setAlerts([...list].sort((a, b) => b.sent.localeCompare(a.sent))))
+      getFeed(simKey > 0 ? [] : areas).then((f) => {
+        setAlerts(f.alerts)
+        setUsgs(f.usgs)
+      })
     }
   }, [areas, simKey])
+
+  const refresh = async () => {
+    if (!areas || refreshing) return
+    setRefreshing(true)
+    const f = await getFeed(areas, true)
+    setAlerts(f.alerts)
+    setUsgs(f.usgs)
+    setRefreshing(false)
+  }
 
   if (areas === null) return null
 
   const toggleArea = (id: string) => {
-    const next = areas.includes(id) ? areas.filter((a) => a !== id) : [...areas, id]
-    if (next.length > 3) return
-    setAreasState(next)
+    setAreasState((prev) => {
+      const base = prev ?? []
+      const next = base.includes(id) ? base.filter((a) => a !== id) : [...base, id]
+      return next.length > 3 ? base : next
+    })
   }
 
   if (editing) {
@@ -83,7 +98,8 @@ export function Avisos() {
         </header>
 
         <div className="banner" role="note">
-          <strong>Modo demostración</strong> — estos datos no son reales.
+          <strong>Los avisos marcados DEMO son de ejemplo.</strong> Los sismos con fuente USGS
+          son datos reales del servicio geológico de EE. UU.
         </div>
 
         <div className="estado-grid" role="group" aria-label="Elige tus estados (máximo 3)">
@@ -129,7 +145,8 @@ export function Avisos() {
       </header>
 
       <div className="banner" role="note">
-        <strong>Modo demostración</strong> — estos datos no son reales.
+        <strong>Los avisos marcados DEMO son de ejemplo.</strong> Los sismos con fuente USGS son
+        datos reales del servicio geológico de EE. UU.
       </div>
 
       <div className="chip-row">
@@ -142,6 +159,15 @@ export function Avisos() {
           Cambiar zonas
         </button>
       </div>
+
+      <p className="dim usgs-status" role="status">
+        {usgs
+          ? `Sismos reales (USGS): actualizado ${relativeTime(usgs.fetchedAt)}${usgs.stale ? ' · sin conexión, datos guardados' : ''}`
+          : 'Sismos reales (USGS): aún sin conexión — se cargarán cuando haya internet.'}{' '}
+        <button className="ghost" onClick={refresh} disabled={refreshing}>
+          {refreshing ? 'Actualizando…' : 'Actualizar'}
+        </button>
+      </p>
 
       {alerts.map((a, i) => {
         const open = expanded === a.id
@@ -171,7 +197,7 @@ export function Avisos() {
             </button>
             <div className="chip-row">
               <span className={`chip sev-${a.severity}`}>{SEVERITY_LABEL[a.severity]}</span>
-              <span className="chip demo">DEMO · datos de ejemplo</span>
+              {a.demo && <span className="chip demo">DEMO · datos de ejemplo</span>}
               <span className="chip">Fuente: {a.source}</span>
             </div>
             {open && (

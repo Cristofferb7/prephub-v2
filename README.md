@@ -17,6 +17,8 @@ During the 2026 earthquakes, Venezuelans faced an information blackout in the mo
 - **Plan familiar** — guided reunification plan: contacts (including an out-of-country contact — designed for the diaspora), meeting points, and emergency numbers. Share it by WhatsApp, print it (paper survives blackouts), or hand it off as a QR code.
 - **Guías offline** — during the quake, right after, safe water, essential first aid, "is it safe to go back in?", and heavy-rain/landslide guidance. Sourced from FUNVISIS, CENAPRED, SENAPRED, FEMA/Ready.gov, and PAHO — adapted into Venezuelan Spanish and credited in-app.
 - **Ahora mismo** — a stripped-down emergency mode: huge red buttons, giant text, zero navigation. Built to be used by shaking hands in the dark.
+- **Avisos** — a chronological alert feed: **real recent earthquakes from the USGS catalog** (Venezuela bounding box, cached in IndexedDB so the last snapshot survives offline) merged with a clearly-badged DEMO advisory scenario. Events that happened + advisories only — earthquakes cannot be predicted, and this app never pretends otherwise.
+- **Cerca de ti** — nearby support points (water/food/medical/shelter) with status and service filters and a schematic SVG map. DEMO data today; architected for Protección Civil / community-verified sources later.
 - **Light & dark themes** — dark by default (blackout- and OLED-friendly).
 
 Everything is stored on-device (IndexedDB). Nothing is ever sent to a server — there is no server.

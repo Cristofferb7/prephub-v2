@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
 import { useLiveQuery } from 'dexie-react-hooks'
 import { db, getAreas } from '../lib/db'
-import { demoProvider, type Alert } from '../data/alerts'
+import { getFeed } from '../lib/alertsFeed'
+import type { Alert } from '../data/alerts'
 import { computeScore, nextStep } from '../lib/score'
 import { KIT_ITEMS } from '../data/kit'
 import { ScoreRing } from '../components/ScoreRing'
@@ -20,8 +21,10 @@ export function Home() {
   useEffect(() => {
     getAreas().then((areas) => {
       if (areas.length === 0) return
-      demoProvider.getActiveAlerts(areas).then((list) => {
-        setSevereAlert(list.find((a) => a.severity === 'severe' || a.severity === 'extreme') ?? null)
+      getFeed(areas).then((f) => {
+        setSevereAlert(
+          f.alerts.find((a) => a.severity === 'severe' || a.severity === 'extreme') ?? null,
+        )
       })
     })
   }, [])
@@ -49,7 +52,8 @@ export function Home() {
 
       {severeAlert && (
         <div className="banner banner-warn" role="alert">
-          <strong>{severeAlert.headline}</strong> <span className="chip demo">DEMO</span>{' '}
+          <strong>{severeAlert.headline}</strong>{' '}
+          {severeAlert.demo && <span className="chip demo">DEMO</span>}{' '}
           <Link to="/avisos">Ver avisos</Link>
         </div>
       )}
