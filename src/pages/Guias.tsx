@@ -47,7 +47,7 @@ export function GuidePage({ id }: { id: string }) {
             ))}
           </ol>
           {s.warning && (
-            <p className="banner banner-warn" role="note">
+            <p className="banner" role="note">
               ⚠ {s.warning}
             </p>
           )}

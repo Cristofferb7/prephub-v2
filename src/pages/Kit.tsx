@@ -9,24 +9,30 @@ export function Kit() {
   const byId = new Map((states ?? []).map((s) => [s.itemId, s]))
   const score = kitScore(states ?? [])
 
+  // Read-modify-write inside a transaction: useLiveQuery state can lag a fast
+  // double-tap, so never derive the new row from render-time state.
   async function toggle(itemId: string) {
-    const prev = byId.get(itemId)
-    await db.kitItems.put({
-      itemId,
-      checked: prev?.checked === 1 ? 0 : 1,
-      expiresAt: prev?.expiresAt,
-      updatedAt: new Date().toISOString(),
+    await db.transaction('rw', db.kitItems, async () => {
+      const prev = await db.kitItems.get(itemId)
+      await db.kitItems.put({
+        itemId,
+        checked: prev?.checked === 1 ? 0 : 1,
+        expiresAt: prev?.expiresAt,
+        updatedAt: new Date().toISOString(),
+      })
     })
     void requestPersistentStorage()
   }
 
   async function setExpiry(itemId: string, expiresAt: string) {
-    const prev = byId.get(itemId)
-    await db.kitItems.put({
-      itemId,
-      checked: prev?.checked ?? 0,
-      expiresAt: expiresAt || undefined,
-      updatedAt: new Date().toISOString(),
+    await db.transaction('rw', db.kitItems, async () => {
+      const prev = await db.kitItems.get(itemId)
+      await db.kitItems.put({
+        itemId,
+        checked: prev?.checked ?? 0,
+        expiresAt: expiresAt || undefined,
+        updatedAt: new Date().toISOString(),
+      })
     })
   }
 

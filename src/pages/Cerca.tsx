@@ -99,12 +99,11 @@ export function Cerca() {
         <strong>Modo demostración</strong> — estos datos no son reales.
       </div>
 
-      <div className="seg-control no-print" role="tablist" aria-label="Vista">
+      <div className="seg-control no-print" role="group" aria-label="Vista">
         {(['lista', 'mapa'] as const).map((v) => (
           <button
             key={v}
-            role="tab"
-            aria-selected={view === v}
+            aria-pressed={view === v}
             className={view === v ? 'active' : ''}
             onClick={() => setView(v)}
           >
@@ -286,7 +285,12 @@ function SchematicMap({
               tabIndex={0}
               aria-label={`${p.name} — ${PLACE_STATUS_LABEL[p.status]}`}
               onClick={() => onPick(p.id)}
-              onKeyDown={(e) => e.key === 'Enter' && onPick(p.id)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault()
+                  onPick(p.id)
+                }
+              }}
             />
             {p.status === 'cerrado' && <path d="M-3.5-3.5 3.5 3.5M3.5-3.5-3.5 3.5" stroke="var(--bg)" strokeWidth="2" />}
           </g>

@@ -60,7 +60,8 @@ export function Avisos() {
   useEffect(() => {
     if (areas && areas.length > 0) {
       // Simulacro replays the full demo scenario regardless of areas.
-      getFeed(simKey > 0 ? [] : areas).then((f) => {
+      const sim = simKey > 0
+      getFeed(sim ? [] : areas, { includeExpired: sim }).then((f) => {
         setAlerts(f.alerts)
         setUsgs(f.usgs)
       })
@@ -70,7 +71,7 @@ export function Avisos() {
   const refresh = async () => {
     if (!areas || refreshing) return
     setRefreshing(true)
-    const f = await getFeed(areas, true)
+    const f = await getFeed(areas, { forceRefresh: true })
     setAlerts(f.alerts)
     setUsgs(f.usgs)
     setRefreshing(false)
@@ -228,7 +229,11 @@ export function Avisos() {
           >
             Probar notificación
           </button>
-          <button onClick={() => setSimKey((k) => k + 1)}>Ver simulacro</button>
+          {simKey > 0 ? (
+            <button onClick={() => setSimKey(0)}>Terminar simulacro</button>
+          ) : (
+            <button onClick={() => setSimKey((k) => k + 1)}>Ver simulacro</button>
+          )}
         </div>
         {msg && (
           <p className="dim" role="status">

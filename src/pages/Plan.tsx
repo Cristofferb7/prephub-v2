@@ -64,15 +64,37 @@ export function Plan() {
   }, [plan?.members.length, step])
 
   // Autosave (debounced) — a form abandoned mid-fill must still survive.
+  const pendingSave = useRef<FamilyPlan | null>(null)
   function update(next: FamilyPlan) {
     next.updatedAt = new Date().toISOString()
     setPlan({ ...next })
+    pendingSave.current = next
     clearTimeout(saveTimer.current)
     saveTimer.current = setTimeout(() => {
+      pendingSave.current = null
       db.plan.put(next)
       void requestPersistentStorage()
     }, 400)
   }
+
+  // Android kills backgrounded PWAs aggressively — flush the last keystrokes
+  // the moment the app is hidden, not 400 ms later.
+  useEffect(() => {
+    const flush = () => {
+      if (pendingSave.current) {
+        db.plan.put(pendingSave.current)
+        pendingSave.current = null
+        clearTimeout(saveTimer.current)
+      }
+    }
+    document.addEventListener('visibilitychange', flush)
+    window.addEventListener('pagehide', flush)
+    return () => {
+      flush()
+      document.removeEventListener('visibilitychange', flush)
+      window.removeEventListener('pagehide', flush)
+    }
+  }, [])
 
   if (!plan) return null
 
@@ -84,6 +106,8 @@ export function Plan() {
   const goTo = (s: number) => {
     setStep(Math.max(0, Math.min(STEPS.length - 1, s)))
     window.scrollTo(0, 0)
+    // Move focus (and the screen-reader announcement) to the new step label.
+    requestAnimationFrame(() => document.getElementById('wizard-step-label')?.focus())
   }
 
   const valid = stepValid(step, plan)
@@ -105,7 +129,7 @@ export function Plan() {
             <span key={i} className={i < step ? 'done' : i === step ? 'current' : ''} />
           ))}
         </div>
-        <p className="dim">
+        <p className="dim" id="wizard-step-label" tabIndex={-1}>
           Paso {step + 1} de {STEPS.length} · {STEPS[step]}
         </p>
       </header>
@@ -306,7 +330,13 @@ export function Plan() {
                 className="primary"
                 onClick={async () => {
                   const result = await sharePlan(plan)
-                  setShareMsg(result === 'copied' ? 'Texto copiado — pégalo en WhatsApp.' : '')
+                  setShareMsg(
+                    result === 'copied'
+                      ? 'Texto copiado — pégalo en WhatsApp.'
+                      : result === 'failed'
+                        ? 'No se pudo compartir. Usa Imprimir o el código QR.'
+                        : '',
+                  )
                 }}
               >
                 Compartir por WhatsApp
@@ -381,6 +411,7 @@ export function Plan() {
           <button
             type="button"
             className={`primary next${valid ? '' : ' pending'}`}
+            aria-label={valid ? undefined : 'Siguiente — aún faltan datos en este paso'}
             onClick={() => goTo(step + 1)}
           >
             {step === STEPS.length - 2 ? 'Ver resumen' : 'Siguiente'}

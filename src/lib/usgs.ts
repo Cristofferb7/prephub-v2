@@ -91,7 +91,13 @@ export async function getUsgsSnapshot(force = false): Promise<UsgsSnapshot | nul
   if (cached && fresh && !force) return { ...cached, stale: false }
 
   try {
-    const res = await fetch(FEED_URL(), { signal: AbortSignal.timeout(10_000) })
+    // AbortSignal.timeout is Chrome 103+; old WebViews (our target floor) lack
+    // it — build the signal manually so the fetch still runs there.
+    const ctrl = new AbortController()
+    const timer = setTimeout(() => ctrl.abort(), 10_000)
+    const res = await fetch(FEED_URL(), { signal: ctrl.signal }).finally(() =>
+      clearTimeout(timer),
+    )
     if (!res.ok) throw new Error(String(res.status))
     const json = (await res.json()) as { features: UsgsFeature[] }
     const alerts = json.features

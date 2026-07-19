@@ -43,15 +43,9 @@ export default defineConfig({
         // Precache the entire shell + bundled content: the app must be 100%
         // functional offline from first load (see CLAUDE.md).
         globPatterns: ['**/*.{js,css,html,svg,png,ico,json,webmanifest,woff2}'],
+        // All content ships bundled (src/data/*.ts) — no runtimeCaching routes.
+        // USGS responses are cached in Dexie by src/lib/usgs.ts, not the SW.
         navigateFallback: 'index.html',
-        runtimeCaching: [
-          {
-            // Content JSON (guides, checklist definitions)
-            urlPattern: ({ url }) => url.pathname.startsWith('/content/'),
-            handler: 'StaleWhileRevalidate',
-            options: { cacheName: 'prephub-content' },
-          },
-        ],
       },
     }),
   ],

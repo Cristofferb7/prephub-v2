@@ -100,7 +100,7 @@ export function Ajustes() {
           </div>
         </div>
 
-        <div className="setting-row">
+        <label className="setting-row">
           <div>
             <strong>Texto en negrita</strong>
             <p className="hint">Letras más gruesas, más fáciles de leer.</p>
@@ -111,9 +111,9 @@ export function Ajustes() {
             onChange={(e) => applyBold(e.target.checked)}
             aria-label="Activar texto en negrita"
           />
-        </div>
+        </label>
 
-        <div className="setting-row">
+        <label className="setting-row">
           <div>
             <strong>Contraste alto</strong>
             <p className="hint">Bordes y textos más marcados.</p>
@@ -124,7 +124,7 @@ export function Ajustes() {
             onChange={(e) => applyContrast(e.target.checked)}
             aria-label="Activar contraste alto"
           />
-        </div>
+        </label>
       </section>
 
       <section className="card">

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { navigate } from '../router'
 
 // Emergency mode: a different gear. Black background, huge type, zero chrome.
@@ -43,13 +43,32 @@ const CONTENT = {
 type Section = keyof typeof CONTENT
 
 export function Ahora() {
-  const [open, setOpen] = useState<Section | null>(null)
+  // Section state lives in history: Android's hardware back from an open
+  // section must return to this menu, not dump the user out of emergency mode.
+  const [open, setOpenState] = useState<Section | null>(() => {
+    const h = window.location.hash.slice(1)
+    return h in CONTENT ? (h as Section) : null
+  })
+
+  const openSection = (s: Section) => {
+    window.history.pushState(null, '', '#' + s)
+    setOpenState(s)
+  }
+
+  useEffect(() => {
+    const onPop = () => {
+      const h = window.location.hash.slice(1)
+      setOpenState(h in CONTENT ? (h as Section) : null)
+    }
+    window.addEventListener('popstate', onPop)
+    return () => window.removeEventListener('popstate', onPop)
+  }, [])
 
   if (open) {
     const c = CONTENT[open]
     return (
       <div className="ahora-mode">
-        <button type="button" className="ahora-back" onClick={() => setOpen(null)}>
+        <button type="button" className="ahora-back" onClick={() => window.history.back()}>
           ← Volver
         </button>
         <h1>{c.title}</h1>
@@ -68,13 +87,13 @@ export function Ahora() {
         ← Salir
       </button>
       <h1>¿QUÉ ESTÁ PASANDO?</h1>
-      <button type="button" className="ahora-option" onClick={() => setOpen('durante')}>
+      <button type="button" className="ahora-option" onClick={() => openSection('durante')}>
         ESTÁ TEMBLANDO
       </button>
-      <button type="button" className="ahora-option" onClick={() => setOpen('despues')}>
+      <button type="button" className="ahora-option" onClick={() => openSection('despues')}>
         YA PASÓ EL SISMO
       </button>
-      <button type="button" className="ahora-option" onClick={() => setOpen('tsunami')}>
+      <button type="button" className="ahora-option" onClick={() => openSection('tsunami')}>
         VIVO EN LA COSTA
       </button>
     </div>

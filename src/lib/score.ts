@@ -40,7 +40,10 @@ export function expiryStatus(states: KitItemState[]): { expired: string[]; expir
   const expiringSoon: string[] = []
   for (const s of states) {
     if (!s.expiresAt || s.checked !== 1) continue
-    const t = new Date(s.expiresAt).getTime()
+    // expiresAt is date-only; bare Date() would parse it as UTC midnight and
+    // flag items expired up to a day early in Venezuela (UTC−4). An item is
+    // valid through the END of its stated day, local time.
+    const t = new Date(s.expiresAt + 'T23:59:59').getTime()
     if (Number.isNaN(t)) continue
     if (t < now) expired.push(s.itemId)
     else if (t < soon) expiringSoon.push(s.itemId)

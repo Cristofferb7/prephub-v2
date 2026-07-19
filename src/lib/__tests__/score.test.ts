@@ -66,6 +66,19 @@ describe('computeScore expiry', () => {
     expect(s.expired).toEqual(['agua'])
     expect(s.expiringSoon).toEqual(['comida'])
   })
+
+  it('treats an item as valid through the END of its stated day (no UTC off-by-one)', () => {
+    const today = new Date()
+    const y = today.getFullYear()
+    const m = String(today.getMonth() + 1).padStart(2, '0')
+    const d = String(today.getDate()).padStart(2, '0')
+    const states: KitItemState[] = [
+      { itemId: 'agua', checked: 1, expiresAt: `${y}-${m}-${d}`, updatedAt: '' },
+    ]
+    const s = computeScore(states, undefined)
+    expect(s.expired).toEqual([]) // still valid today
+    expect(s.expiringSoon).toEqual(['agua']) // but flagged as due
+  })
 })
 
 describe('nextStep', () => {

@@ -30,7 +30,7 @@ export function Home() {
   }, [])
 
   return (
-    <div className="page">
+    <div className="page home-grid">
       <section className="score-hero">
         <ScoreRing value={score.total} />
         <p className="dim">
@@ -59,7 +59,7 @@ export function Home() {
       )}
 
       {score.expired.length > 0 && (
-        <div className="banner banner-warn" role="alert">
+        <div className="banner" role="alert">
           <strong>Vencido:</strong> {score.expired.map(itemLabel).join(', ')}.{' '}
           <Link to="/kit">Reponer ahora</Link>
         </div>

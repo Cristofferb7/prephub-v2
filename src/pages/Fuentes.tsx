@@ -65,7 +65,20 @@ export function Fuentes() {
           Guarda un archivo con tu kit y tu plan (por si cambias de teléfono), o restaura uno.
         </p>
         <div className="btn-row">
-          <button type="button" className="primary" onClick={() => exportData()}>
+          <button
+            type="button"
+            className="primary"
+            onClick={async () => {
+              const r = await exportData()
+              setMsg(
+                r === 'shared'
+                  ? 'Respaldo compartido.'
+                  : r === 'downloaded'
+                    ? 'Respaldo descargado. Guárdalo donde no se pierda (correo, Drive…).'
+                    : '',
+              )
+            }}
+          >
             Exportar respaldo
           </button>
           <button type="button" onClick={() => fileRef.current?.click()}>

@@ -110,9 +110,16 @@ function Shell() {
     <div className="shell">
       <header className="topbar no-print">
         <Link to="/" className="brand" aria-label="PrepHub, inicio">
-          <svg width="34" height="34" viewBox="0 0 44 44" aria-hidden="true">
-            <rect width="44" height="44" rx="10" fill="var(--surface-2)" />
-            <path d="M22 8v28M8 22h28" stroke="var(--accent)" strokeWidth="9" />
+          <svg width="34" height="34" viewBox="0 0 512 512" aria-hidden="true">
+            <rect width="512" height="512" rx="112" fill="var(--surface-2)" />
+            <g transform="translate(256 256) scale(.8) translate(-256 -256)">
+              <path
+                fill="var(--accent)"
+                d="M256 78 Q330 108 410 112 Q414 280 348 366 Q300 424 256 448 Q212 424 164 366 Q98 280 102 112 Q182 108 256 78 Z"
+              />
+              <rect x="227" y="152" width="58" height="200" rx="14" fill="var(--surface-2)" />
+              <rect x="156" y="223" width="200" height="58" rx="14" fill="var(--surface-2)" />
+            </g>
           </svg>
           <strong>PrepHub</strong>
         </Link>

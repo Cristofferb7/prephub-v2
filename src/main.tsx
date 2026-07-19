@@ -16,13 +16,21 @@ createRoot(document.getElementById('root')!).render(
 // emergency. Show a banner and let the user decide.
 const updateSW = registerSW({
   onNeedRefresh() {
+    if (document.querySelector('.update-banner')) return
     const banner = document.createElement('div')
     banner.className = 'update-banner'
-    banner.innerHTML = '<span>Hay una versión nueva disponible.</span>'
+    banner.setAttribute('role', 'status')
+    const span = document.createElement('span')
+    span.textContent = 'Hay una versión nueva disponible.'
+    const later = document.createElement('button')
+    later.textContent = 'Después'
+    later.className = 'ghost'
+    later.onclick = () => banner.remove()
     const btn = document.createElement('button')
     btn.textContent = 'Actualizar'
+    btn.className = 'primary'
     btn.onclick = () => updateSW(true)
-    banner.appendChild(btn)
+    banner.append(span, later, btn)
     document.body.appendChild(banner)
   },
 })

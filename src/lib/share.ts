@@ -44,16 +44,34 @@ export function planToText(plan: FamilyPlan): string {
   return lines.join('\n')
 }
 
-export async function sharePlan(plan: FamilyPlan): Promise<'shared' | 'copied'> {
+export async function sharePlan(plan: FamilyPlan): Promise<'shared' | 'copied' | 'cancelled' | 'failed'> {
   const text = planToText(plan)
   if (navigator.share) {
     try {
       await navigator.share({ text })
       return 'shared'
-    } catch {
-      /* user cancelled or share failed — fall through to clipboard */
+    } catch (e) {
+      // User closed the share sheet on purpose — don't touch their clipboard.
+      if ((e as DOMException)?.name === 'AbortError') return 'cancelled'
     }
   }
-  await navigator.clipboard.writeText(text)
-  return 'copied'
+  try {
+    await navigator.clipboard.writeText(text)
+    return 'copied'
+  } catch {
+    // Old WebViews: no async clipboard. Legacy path still works there.
+    try {
+      const ta = document.createElement('textarea')
+      ta.value = text
+      ta.style.position = 'fixed'
+      ta.style.opacity = '0'
+      document.body.appendChild(ta)
+      ta.select()
+      document.execCommand('copy')
+      ta.remove()
+      return 'copied'
+    } catch {
+      return 'failed'
+    }
+  }
 }
