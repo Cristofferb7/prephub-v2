@@ -9,6 +9,7 @@ import { Fuentes } from './pages/Fuentes'
 import { Ajustes } from './pages/Ajustes'
 import { Cerca } from './pages/Cerca'
 import { Casa } from './pages/Casa'
+import { Simulacro } from './pages/Simulacro'
 import { Avisos } from './pages/Avisos'
 
 const ICO = {
@@ -98,6 +99,7 @@ function Screen() {
   if (path === '/ajustes') return <Ajustes />
   if (path === '/cerca') return <Cerca />
   if (path === '/casa') return <Casa />
+  if (path === '/simulacro') return <Simulacro />
   if (path === '/avisos') return <Avisos />
   return <Home />
 }

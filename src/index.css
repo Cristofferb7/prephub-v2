@@ -1382,3 +1382,49 @@ body {
   border: none;
   border-top: 2pt dashed #000;
 }
+
+/* ---- simulacro (drill mode) ---- */
+
+.drill-mode {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 70vh;
+}
+
+.drill-mode h1 {
+  font-size: 3.2rem;
+  letter-spacing: 0.02em;
+  color: var(--accent-bright);
+}
+
+.drill-step {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.8rem;
+}
+
+.drill-body {
+  font-size: 1.1rem;
+  max-width: 30ch;
+}
+
+.drill-clock {
+  font-family: var(--display);
+  font-size: 6rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  color: var(--text);
+  line-height: 1;
+  margin: 12px 0;
+}
+
+.cta-btn {
+  min-height: 56px;
+  font-size: 1.05rem;
+}
+
+.drill-line {
+  font-size: 0.85rem;
+  margin-top: 10px;
+}

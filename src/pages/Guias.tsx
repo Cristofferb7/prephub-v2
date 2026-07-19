@@ -1,5 +1,6 @@
 import { GUIDES, getGuide } from '../data/guides'
 import { Link } from '../router'
+import { SpeakButton } from '../components/SpeakButton'
 
 export function GuideIndex() {
   return (
@@ -36,6 +37,14 @@ export function GuidePage({ id }: { id: string }) {
         </Link>
         <h1>{guide.title}</h1>
         <p className="dim">{guide.subtitle}</p>
+        <div className="no-print" style={{ marginTop: 12 }}>
+          <SpeakButton
+            text={[
+              guide.title,
+              ...guide.sections.flatMap((sec) => [sec.heading + '.', ...sec.steps]),
+            ].join(' ')}
+          />
+        </div>
       </header>
 
       {guide.sections.map((s) => (

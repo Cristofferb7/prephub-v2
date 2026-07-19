@@ -99,8 +99,8 @@ export function Avisos() {
         </header>
 
         <div className="banner" role="note">
-          <strong>Los avisos marcados DEMO son de ejemplo.</strong> Los sismos con fuente USGS
-          son datos reales del servicio geológico de EE. UU.
+          <strong>Los avisos marcados DEMO son de ejemplo.</strong> Los avisos con fuente USGS o
+          GDACS son datos reales.
         </div>
 
         <div className="estado-grid" role="group" aria-label="Elige tus estados (máximo 3)">
@@ -146,8 +146,8 @@ export function Avisos() {
       </header>
 
       <div className="banner" role="note">
-        <strong>Los avisos marcados DEMO son de ejemplo.</strong> Los sismos con fuente USGS son
-        datos reales del servicio geológico de EE. UU.
+        <strong>Los avisos marcados DEMO son de ejemplo.</strong> Los avisos con fuente USGS o
+        GDACS son datos reales.
       </div>
 
       <div className="chip-row">
@@ -163,8 +163,8 @@ export function Avisos() {
 
       <p className="dim usgs-status" role="status">
         {usgs
-          ? `Sismos reales (USGS): actualizado ${relativeTime(usgs.fetchedAt)}${usgs.stale ? ' · sin conexión, datos guardados' : ''}`
-          : 'Sismos reales (USGS): aún sin conexión — se cargarán cuando haya internet.'}{' '}
+          ? `Datos reales (USGS sismos · GDACS lluvias): actualizados ${relativeTime(usgs.fetchedAt)}${usgs.stale ? ' · sin conexión, datos guardados' : ''}`
+          : 'Datos reales (USGS · GDACS): aún sin conexión — se cargarán cuando haya internet.'}{' '}
         <button className="ghost" onClick={refresh} disabled={refreshing}>
           {refreshing ? 'Actualizando…' : 'Actualizar'}
         </button>

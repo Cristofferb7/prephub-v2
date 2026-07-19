@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useLiveQuery } from 'dexie-react-hooks'
 import { db, getAreas } from '../lib/db'
+import { relativeTime } from '../lib/time'
 import { getFeed } from '../lib/alertsFeed'
 import type { Alert } from '../data/alerts'
 import { computeScore, nextStep } from '../lib/score'
@@ -18,6 +19,10 @@ export function Home() {
   const score = computeScore(kitStates ?? [], plan, casaStates ?? [])
   const next = nextStep(kitStates ?? [], plan, casaStates ?? [])
   const [severeAlert, setSevereAlert] = useState<Alert | null>(null)
+  const lastDrill = useLiveQuery(async () => {
+    const s = await db.settings.get('lastDrillAt')
+    return typeof s?.value === 'string' ? s.value : null
+  }, [])
 
   useEffect(() => {
     getAreas().then((areas) => {
@@ -49,6 +54,12 @@ export function Home() {
             Siguiente: {next.label} — {next.minutes} min
           </Link>
         )}
+        <p className="dim drill-line">
+          {lastDrill
+            ? `Último simulacro: ${relativeTime(lastDrill)}. `
+            : 'Nunca han practicado juntos. '}
+          <Link to="/simulacro">Hacer un simulacro (3 min)</Link>
+        </p>
       </section>
 
       {severeAlert && (

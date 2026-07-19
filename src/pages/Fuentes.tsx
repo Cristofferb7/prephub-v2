@@ -112,6 +112,10 @@ export function Fuentes() {
         </p>
         <ul className="sources">
           <li>
+            <strong>GDACS</strong> — alertas reales de inundaciones y ciclones en «Avisos».
+            Sistema global de alerta de desastres de la Comisión Europea (JRC) y la ONU.
+          </li>
+          <li>
             <strong>OpenStreetMap</strong> — ubicaciones de hospitales, clínicas y puntos de
             agua en «Cerca de ti». Datos © colaboradores de OpenStreetMap (licencia ODbL).
           </li>

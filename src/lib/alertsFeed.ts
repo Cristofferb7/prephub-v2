@@ -1,5 +1,6 @@
 import { demoProvider, type Alert } from '../data/alerts'
 import { getUsgsSnapshot, type UsgsSnapshot } from './usgs'
+import { getGdacsSnapshot } from './gdacs'
 
 export interface Feed {
   alerts: Alert[]
@@ -19,12 +20,18 @@ export interface FeedOptions {
  * "active" feed showing a lapsed 48-hour aftershock advisory reads as broken.
  */
 export async function getFeed(areas: string[], opts: FeedOptions = {}): Promise<Feed> {
-  const [demo, usgs] = await Promise.all([
+  const [demo, usgs, gdacs] = await Promise.all([
     demoProvider.getActiveAlerts(areas),
     getUsgsSnapshot(opts.forceRefresh ?? false),
+    getGdacsSnapshot(opts.forceRefresh ?? false),
   ])
   const now = new Date().toISOString()
-  const active = opts.includeExpired ? demo : demo.filter((a) => !a.expires || a.expires > now)
-  const alerts = [...active, ...(usgs?.alerts ?? [])].sort((a, b) => b.sent.localeCompare(a.sent))
+  const notExpired = (a: Alert) => !a.expires || a.expires > now
+  const active = opts.includeExpired ? demo : demo.filter(notExpired)
+  const alerts = [
+    ...active,
+    ...(usgs?.alerts ?? []),
+    ...(gdacs?.alerts.filter(notExpired) ?? []),
+  ].sort((a, b) => b.sent.localeCompare(a.sent))
   return { alerts, usgs }
 }
